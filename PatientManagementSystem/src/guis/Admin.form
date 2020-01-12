@@ -49,7 +49,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jTabbedPane4" max="32767" attributes="0"/>
+                  <Component id="tabAdmin" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -64,7 +64,7 @@
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jTabbedPane4" max="32767" attributes="0"/>
+              <Component id="tabAdmin" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -79,7 +79,7 @@
         <Property name="text" type="java.lang.String" value="Patient Management System"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane4">
+    <Container class="javax.swing.JTabbedPane" name="tabAdmin">
       <Properties>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">

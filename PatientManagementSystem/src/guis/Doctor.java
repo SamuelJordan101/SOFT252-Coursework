@@ -31,7 +31,7 @@ public class Doctor extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tabDoctor = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -176,7 +176,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("View Appointments", jPanel1);
+        tabDoctor.addTab("View Appointments", jPanel1);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("Consultation Notes");
@@ -357,10 +357,12 @@ public class Doctor extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbSaveNotes)
                     .addComponent(btnEndAppointment))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Consultation Notes", jPanel2);
+        tabDoctor.addTab("Consultation Notes", jPanel2);
+
+        jPanel3.setPreferredSize(new java.awt.Dimension(500, 695));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel14.setText("Patient History");
@@ -467,10 +469,10 @@ public class Doctor extends javax.swing.JFrame {
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Patient History", jPanel3);
+        tabDoctor.addTab("Patient History", jPanel3);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel18.setText("Create Appointment");
@@ -531,10 +533,10 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addContainerGap(548, Short.MAX_VALUE))
+                .addContainerGap(446, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Create Appointments", jPanel4);
+        tabDoctor.addTab("Create Appointments", jPanel4);
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel22.setText("Prescribe Medicine");
@@ -617,7 +619,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Prescribe Medicine", jPanel5);
+        tabDoctor.addTab("Prescribe Medicine", jPanel5);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel28.setText("Add New Medicine");
@@ -666,10 +668,10 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(txtMedicineQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNewMedicine)
-                .addContainerGap(574, Short.MAX_VALUE))
+                .addContainerGap(472, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Add New Medicines", jPanel6);
+        tabDoctor.addTab("Add New Medicines", jPanel6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -678,7 +680,7 @@ public class Doctor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1)
+                    .addComponent(tabDoctor)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -693,7 +695,7 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(btnLogOut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tabDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -793,10 +795,10 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTabbedPane tabDoctor;
     private javax.swing.JTable tblAppointments;
     private javax.swing.JTable tblPatientHistory;
     private javax.swing.JTable tblPrescriptioninfo;

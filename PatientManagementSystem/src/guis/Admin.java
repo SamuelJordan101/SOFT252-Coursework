@@ -29,7 +29,7 @@ public class Admin extends javax.swing.JFrame {
 
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
+        tabAdmin = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -89,8 +89,8 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Patient Management System");
 
-        jTabbedPane4.setFocusable(false);
-        jTabbedPane4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        tabAdmin.setFocusable(false);
+        tabAdmin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setText("Create Admin Account");
@@ -156,7 +156,7 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(207, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("Create Admin Account", jPanel2);
+        tabAdmin.addTab("Create Admin Account", jPanel2);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("Create Doctor/Secretary");
@@ -228,7 +228,7 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane4.addTab("Create Doctor/Secretary", jPanel3);
+        tabAdmin.addTab("Create Doctor/Secretary", jPanel3);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel7.setText("View Doctor Ratings");
@@ -298,7 +298,7 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("View Doctor Ratings", jPanel4);
+        tabAdmin.addTab("View Doctor Ratings", jPanel4);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("Approve Doctor Feedback");
@@ -408,7 +408,7 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("Approve Doctor Feedback", jPanel11);
+        tabAdmin.addTab("Approve Doctor Feedback", jPanel11);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Log Out");
@@ -424,7 +424,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
-                    .addComponent(jTabbedPane4))
+                    .addComponent(tabAdmin))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -435,7 +435,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane4)
+                .addComponent(tabAdmin)
                 .addContainerGap())
         );
 
@@ -516,7 +516,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTabbedPane tabAdmin;
     private javax.swing.JTable tblDoctorFeedback;
     private javax.swing.JTable tblDoctorFeedbackApprove;
     private javax.swing.JTextArea txtAdminAddress;
