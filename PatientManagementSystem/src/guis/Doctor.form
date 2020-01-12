@@ -210,7 +210,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cmbConsultationAppointment" max="32767" attributes="0"/>
+                              <Component id="cmbConsultationPatientID" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -274,7 +274,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cmbConsultationAppointment" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbConsultationPatientID" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -341,10 +341,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Appointment"/>
+                <Property name="text" type="java.lang.String" value="Patient ID"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cmbConsultationAppointment">
+            <Component class="javax.swing.JComboBox" name="cmbConsultationPatientID">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">

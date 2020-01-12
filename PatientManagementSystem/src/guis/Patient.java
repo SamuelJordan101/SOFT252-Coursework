@@ -87,7 +87,7 @@ public class Patient extends javax.swing.JFrame {
 
         jLabel3.setText("Rating");
 
-        cmbRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rating", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        cmbRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a rating...", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         cmbRating.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbRatingActionPerformed(evt);
@@ -109,11 +109,11 @@ public class Patient extends javax.swing.JFrame {
                         .addComponent(cmbDoctors, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel28)
-                        .addGap(0, 586, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmbRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(cmbRating, 0, 689, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnDoctorFeedback)))
@@ -140,7 +140,7 @@ public class Patient extends javax.swing.JFrame {
         tabPatient.addTab("Rate Doctors", jPanel1);
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel29.setText("View Doctor Ratings");
+        jLabel29.setText("View Doctor Rating");
 
         jLabel4.setText("Doctor");
 
@@ -148,7 +148,11 @@ public class Patient extends javax.swing.JFrame {
 
         jLabel5.setText("Doctor Name");
 
+        txtDoctorName.setEditable(false);
+
         jLabel6.setText("Doctor Rating");
+
+        txtDoctorRating.setEditable(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -167,7 +171,7 @@ public class Patient extends javax.swing.JFrame {
                         .addComponent(txtDoctorName))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel29)
-                        .addGap(0, 510, Short.MAX_VALUE))
+                        .addGap(0, 521, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

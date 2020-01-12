@@ -39,7 +39,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        cmbConsultationAppointment = new javax.swing.JComboBox<>();
+        cmbConsultationPatientID = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         txtConsultationDateTime = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -181,9 +181,9 @@ public class Doctor extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("Consultation Notes");
 
-        jLabel2.setText("Appointment");
+        jLabel2.setText("Patient ID");
 
-        cmbConsultationAppointment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbConsultationPatientID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setText("Date and Time");
 
@@ -266,7 +266,7 @@ public class Doctor extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmbConsultationAppointment, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(cmbConsultationPatientID, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
@@ -316,7 +316,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(cmbConsultationAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbConsultationPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -745,7 +745,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JTextField cmbAppointmentDosage;
     private javax.swing.JComboBox<String> cmbAppointmentPatient;
     private javax.swing.JTextField cmbAppointmentQuantity;
-    private javax.swing.JComboBox<String> cmbConsultationAppointment;
+    private javax.swing.JComboBox<String> cmbConsultationPatientID;
     private javax.swing.JComboBox<String> cmbPatient;
     private javax.swing.JComboBox<String> cmbPrescribeMedicine;
     private javax.swing.JComboBox<String> cmbPrescribePatient;
