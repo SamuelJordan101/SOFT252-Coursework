@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setPreferredSize(new java.awt.Dimension(370, 260));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
