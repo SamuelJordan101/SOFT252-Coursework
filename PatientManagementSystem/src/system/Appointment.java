@@ -1,40 +1,43 @@
 package system;
 
+import users.*;
+import java.io.*;
+
 public class Appointment {
 
     public static Appointment[] appointments;
-
     private Doctor Doctor;
-
     private Patient Patient;
-
     private String Date;
 
     public Appointment(Doctor Doctor, Patient Patient, String Date) {
+        this.Doctor = Doctor;
+        this.Patient = Patient;
+        this.Date = Date;
     }
 
     public Doctor getDoctor() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Doctor;
     }
 
     public Doctor setDoctor(Doctor Doctor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Doctor = Doctor;
     }
 
     public Patient getPatient() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Patient;
     }
 
     public Patient setPatient(Patient Patient) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Patient = Patient;
     }
 
     public String getDate() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Date;
     }
 
     public String setDate(String Date) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Date = Date;
     }
 
     public Appointment addAppointment(Appointment newAppointment) {

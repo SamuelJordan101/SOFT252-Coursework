@@ -3,7 +3,7 @@ package users;
 import java.io.Serializable;
 import java.io.*;
 
-public class User {
+public class User implements Serializable{
 
     public static User[] users;
 
