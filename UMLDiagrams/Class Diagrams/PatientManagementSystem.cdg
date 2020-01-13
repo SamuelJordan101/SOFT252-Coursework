@@ -47,7 +47,7 @@
         <Method name="setDoB" returnType="String" visibility="public">
           <Argument type="String" name="DoB"/>
         </Method>
-        <Method name="addReqeustAccount" returnType="RequestAccountt" visibility="public">
+        <Method name="addRequestAccount" returnType="RequestAccount" visibility="public">
           <Argument type="RequestAccountt" name="newRequestAccount"/>
         </Method>
         <Method name="removeRequestAccount" returnType="RequestAccount" visibility="public">
