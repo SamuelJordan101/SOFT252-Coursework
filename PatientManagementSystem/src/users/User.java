@@ -1,5 +1,8 @@
 package users;
 
+import java.io.Serializable;
+import java.io.*;
+
 public class User {
 
     public static User[] users;
@@ -19,76 +22,189 @@ public class User {
     private Notification Notification;
 
     public User(String ID, String Firstname, String Lastname, String Password, String Address, Notification Notification) {
+        this.ID = ID;
+        this.Firstname = Firstname;
+        this.Lastname = Lastname;
+        this.Password = Password;
+        this.Address = Address;
+        this.Notification = Notification;
     }
 
     public String getID() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return ID;
     }
 
     public String setID(String ID) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.ID = ID;
     }
 
     public String getFirstname() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Firstname;
     }
 
     public String setFirstname(String Firstname) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Firstname = Firstname;
     }
 
     public String getLastname() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Lastname;
     }
 
     public String setLastname(String Lastname) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Lastname = Lastname;
     }
 
     public String setPassword() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Password;
     }
 
     public String setPassword(String Password) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Password = Password;
     }
 
     public String getAddress() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Address;
     }
 
     public String setAddress(String Address) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Address = Address;
     }
 
     public Notification getNotification() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Return Notification;
     }
 
     public Notification setNotification(Notification Notification) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Notification = Notification;
     }
 
     public User removeUser(User removeUser) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i = 0;
+        
+        User[] store = new User[users.length - 1];
+        
+        for(User user : users) {
+            if(user != removeUser) {
+                store[i] = user;
+                i++;
+            }
+        }
+        users = store;
+        
+        saveUsers();
     }
 
     public User addUser(User newUser) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i;
+        
+        User[] store = new User[users.length + 1];
+        
+        for(i=0;i<store.length-1;i++)
+            store[i] = users[i];
+        
+        store[i] = newUser;
+        users = store;
+        
+        saveUsers();
     }
 
     public static void saveUsers() {
+        String filename = "data/users."; 
+          
+        try {    
+            FileOutputStream file = new FileOutputStream(filename); 
+            ObjectOutputStream out = new ObjectOutputStream(file); 
+              
+            out.writeObject(users); 
+            out.close(); 
+            file.close(); 
+        } 
+          
+        catch(IOException ex) 
+        { 
+            System.out.println("IOException is caught"); 
+        } 
     }
 
     public static void getUsers() {
+        User[] store = null;
+        String filename = "data/users.ser";
+        
+        try {    
+            FileInputStream file = new FileInputStream(filename); 
+            ObjectInputStream in = new ObjectInputStream(file); 
+              
+            store = (User[])in.readObject(); 
+            in.close(); 
+            file.close(); 
+        } 
+        catch(IOException ex) { 
+            System.out.println("IOException is caught: " + ex); 
+        } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException is caught"); 
+        } 
+        
+        User.users = store;
+        sortUsers();
     }
 
     private static void sortUsers() {
+        int  Admins = 0, Doctors = 0, Patients = 0, Secretarys = 0,  A = 0, D = 0, P = 0, S = 0;
+        
+        for(User user : User.users){
+            if(user instanceof Admin)
+                Admins++;
+            else if(user instanceof Doctor)
+                Doctors++;
+            else if(user instanceof Patient)
+                Patients++;
+            else if(user instanceof Secretary)
+                Secretarys++;
+        }
+        
+        Admin[] admins = new Admin[Admins];
+        Doctor[] doctors = new Doctor[Doctors];
+        Patient[] patients = new Patient[Patients];
+        Secretary[] secretarys = new Secretary[Secretarys];
+        
+        for(User user : User.users){
+            if(user instanceof Patient){
+                patients[P] = (Patient) user;
+                P++;
+            }
+            else if(user instanceof Doctor){
+                doctors[D] = (Doctor) user;
+                D++;
+            }
+            else if(user instanceof Admin){
+                admins[A] = (Admin) user;
+                A++;
+            }
+            else if(user instanceof Secretary){
+                secretarys[S] = (Secretary) user;
+                S++;
+            }
+        }
+        
+        Patient.patients = patients;
+        Doctor.doctors = doctors;
+        Admin.admins = admins;
+        Secretary.secretarys = secretarys;
     }
 
     private static void showUsers() {
+        for(Patient patient : Patient.patients)
+            System.out.println(patient.getID());
+        for(Doctor doctor : Doctor.doctors)
+            System.out.println(doctor.getID());
+        for(Admin admin : Admin.admins)
+            System.out.println(admin.getID());
+        for(Secretary secretary : Secretary.secretarys)
+            System.out.println(secretary.getID());
     }
 
     public static void setUsers() {
+        
     }
 }
