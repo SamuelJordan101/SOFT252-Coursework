@@ -20,7 +20,7 @@ public class Appointment {
         return Doctor;
     }
 
-    public Doctor setDoctor(Doctor Doctor) {
+    public void setDoctor(Doctor Doctor) {
         this.Doctor = Doctor;
     }
 
@@ -28,7 +28,7 @@ public class Appointment {
         return Patient;
     }
 
-    public Patient setPatient(Patient Patient) {
+    public void setPatient(Patient Patient) {
         this.Patient = Patient;
     }
 
@@ -36,11 +36,11 @@ public class Appointment {
         return Date;
     }
 
-    public String setDate(String Date) {
+    public void setDate(String Date) {
         this.Date = Date;
     }
 
-    public Appointment addAppointment(Appointment newAppointment) {
+    public void addAppointment(Appointment newAppointment) {
         int i;
         
         Appointment[] store = new Appointment[appointments.length + 1];
@@ -55,7 +55,7 @@ public class Appointment {
         getAppointments();
     }
 
-    public Appointment removeAppointment(Appointment removeAppointment) {
+    public void removeAppointment(Appointment removeAppointment) {
         int i = 0;
         
         Appointment[] store = new Appointment[appointments.length - 1];

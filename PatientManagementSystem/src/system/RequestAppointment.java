@@ -11,7 +11,7 @@ public class RequestAppointment extends Appointment {
         super(Doctor, Patient, Date);
     }
 
-    public RequestAppointment addRequestAppointment(RequestAppointment newRequestAppointment) {
+    public void addRequestAppointment(RequestAppointment newRequestAppointment) {
         int i;
         
         RequestAppointment[] store = new RequestAppointment[appointmentRequests.length + 1];
@@ -27,7 +27,7 @@ public class RequestAppointment extends Appointment {
         saveRequestAppointments();
     }
 
-    public RequestAppointment removeRequestAppointment(RequestAppointment removeRequestAppointment) {
+    public void removeRequestAppointment(RequestAppointment removeRequestAppointment) {
         int i = 0;
         
         RequestAppointment[] store = new RequestAppointment[appointmentRequests.length - 1];

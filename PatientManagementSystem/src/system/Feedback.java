@@ -20,7 +20,7 @@ public class Feedback implements Serializable{
         return Doctor;
     }
 
-    public Doctor setDoctor(Doctor Doctor) {
+    public void setDoctor(Doctor Doctor) {
         this.Doctor = Doctor;
     }
 
@@ -28,7 +28,7 @@ public class Feedback implements Serializable{
         return Rating;
     }
 
-    public float setRating(float Rating) {
+    public void setRating(float Rating) {
         this.Rating = Rating;
     }
 
@@ -36,11 +36,11 @@ public class Feedback implements Serializable{
         return Notes;
     }
 
-    public String setNotes(String Notes) {
+    public void setNotes(String Notes) {
         this.Notes = Notes;
     }
 
-    public Feedback addFeedback(Feedback newFeedback) {
+    public void addFeedback(Feedback newFeedback) {
         int i;
         
         Feedback[] store = new Feedback[feedback.length + 1];

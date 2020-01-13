@@ -16,11 +16,11 @@ public class RequestTermination {
         return Patient;
     }
 
-    public Patient setPatientID(Patient Patient) {
+    public void setPatientID(Patient Patient) {
         this.Patient = Patient;
     }
 
-    public RequestTermination removeRequestTermination(RequestTermination removeRequestTermination) {
+    public void removeRequestTermination(RequestTermination removeRequestTermination) {
         int i = 0;
         
         RequestTermination[] store = new RequestTermination[RequestTerminations.length - 1];
@@ -37,7 +37,7 @@ public class RequestTermination {
         getRequestTerminations();
     }
 
-    public RequestTermination addRequestTermination(RequestTermination newRequestTermination) {
+    public void addRequestTermination(RequestTermination newRequestTermination) {
         int i;
         
         RequestTermination[] store = new RequestTermination[RequestTerminations.length + 1];

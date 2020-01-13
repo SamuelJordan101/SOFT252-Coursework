@@ -11,10 +11,9 @@ public class RequestFeedback extends Feedback {
         super(Doctor, Rating, Notes);
     }
 
-    public RequestFeedback addRequestFeedback(RequestFeedback newRequestFeedback) {
-    }
+    public void addRequestFeedback(RequestFeedback newRequestFeedback) {}
 
-    public RequestFeedback removeRequestFeedback(RequestFeedback removeRequestFeedback) {
+    public void removeRequestFeedback(RequestFeedback removeRequestFeedback) {
         int i = 0;
         
         RequestFeedback[] store = new RequestFeedback[RequestFeedbacks.length - 1];

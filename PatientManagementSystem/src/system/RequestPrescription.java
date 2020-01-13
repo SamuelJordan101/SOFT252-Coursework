@@ -11,7 +11,7 @@ public class RequestPrescription extends Prescription {
         super(Doctor, Patient, Notes, Medicine, Quantity, Dosage);
     }
 
-    public RequestPrescription removeRequestPrescription(RequestPrescription removeRequestPrescription) {
+    public void removeRequestPrescription(RequestPrescription removeRequestPrescription) {
         int i = 0;
         
         RequestPrescription[] store = new RequestPrescription[RequestPrescriptions.length - 1];
@@ -28,7 +28,7 @@ public class RequestPrescription extends Prescription {
         getRequestPrescriptions();
     }
 
-    public RequestPrescription addRequestPrescription(RequestPrescription newRequestPrescription) {
+    public void addRequestPrescription(RequestPrescription newRequestPrescription) {
         int i;
         
         RequestPrescription[] store = new RequestPrescription[RequestPrescriptions.length + 1];

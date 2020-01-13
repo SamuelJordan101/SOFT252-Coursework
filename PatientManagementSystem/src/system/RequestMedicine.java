@@ -10,7 +10,7 @@ public class RequestMedicine extends Medicine {
         super(Name, Stock);
     }
 
-    public RequestMedicine removeRequestMedicine(RequestMedicine removeRequestMedicine) {
+    public void removeRequestMedicine(RequestMedicine removeRequestMedicine) {
         int i = 0;
         
         RequestMedicine[] store = new RequestMedicine[RequestMedicines.length - 1];
@@ -27,7 +27,7 @@ public class RequestMedicine extends Medicine {
         getRequestMedicines();
     }
 
-    public RequestMedicine addRequestMedicine(RequestMedicine newMedicine) {
+    public void addRequestMedicine(RequestMedicine newMedicine) {
         int i;
         
         RequestMedicine[] store = new RequestMedicine[RequestMedicines.length + 1];

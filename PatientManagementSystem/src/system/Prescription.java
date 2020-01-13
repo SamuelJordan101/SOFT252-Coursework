@@ -27,7 +27,7 @@ public class Prescription implements Serializable {
         return Doctor;
     }
 
-    public Doctor setDoctor(Doctor Doctor) {
+    public void setDoctor(Doctor Doctor) {
         this.Doctor = Doctor;
     }
 
@@ -35,7 +35,7 @@ public class Prescription implements Serializable {
         return Patient;
     }
 
-    public Patient setPatient(Patient Patient) {
+    public void setPatient(Patient Patient) {
         this.Patient = Patient;
     }
 
@@ -43,7 +43,7 @@ public class Prescription implements Serializable {
         return Notes;
     }
 
-    public String setNotes(String Notes) {
+    public void setNotes(String Notes) {
         this.Notes = Notes;
     }
 
@@ -51,7 +51,7 @@ public class Prescription implements Serializable {
         return Medicine;
     }
 
-    public Medicine setMedicine(Medicine Medicine) {
+    public void setMedicine(Medicine Medicine) {
         this.Medicine = Medicine;
     }
 
@@ -59,7 +59,7 @@ public class Prescription implements Serializable {
         return Quantity;
     }
 
-    public int setQuantity(int Quantity) {
+    public void setQuantity(int Quantity) {
         this.Quantity = Quantity;
     }
 
@@ -67,11 +67,11 @@ public class Prescription implements Serializable {
         return Dosage;
     }
 
-    public String setDosage(String Dosage) {
+    public void setDosage(String Dosage) {
         this.Dosage = Dosage;
     }
 
-    public Prescription removePrescription(Prescription removePrescription) {
+    public void removePrescription(Prescription removePrescription) {
         int i = 0;
         
         Prescription[] store = new Prescription[prescriptions.length - 1];
@@ -89,7 +89,7 @@ public class Prescription implements Serializable {
         getPrescriptions();
     }
 
-    public Prescription addPrescription(Prescription newPrescription) {
+    public void addPrescription(Prescription newPrescription) {
         int i;
         
         Prescription[] store = new Prescription[prescriptions.length + 1];

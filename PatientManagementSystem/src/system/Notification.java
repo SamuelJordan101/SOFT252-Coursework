@@ -2,7 +2,7 @@ package system;
 
 import java.io.*;
 
-public class Notification {
+public class Notification implements Serializable {
 
     private String Message;
 
@@ -14,7 +14,7 @@ public class Notification {
         return Message;
     }
 
-    public String setMessage(String Message) {
+    public void setMessage(String Message) {
         this.Message = Message;
     }
 }

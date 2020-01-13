@@ -1,4 +1,4 @@
-package system;
+ package system;
 
 import java.io.*;
 import users.*;
@@ -17,11 +17,11 @@ public class PastAppointment extends Appointment {
         return pastPrescription;
     }
 
-    public Prescription setPastPrescription(Prescription pastPrescription) {
+    public void setPastPrescription(Prescription pastPrescription) {
         this.pastPrescription = pastPrescription;
     }
 
-    public PastAppointment addPastAppointment(PastAppointment newPastAppointment) {
+    public void addPastAppointment(PastAppointment newPastAppointment) {
         int i;
         
         PastAppointment[] store = new PastAppointment[pastAppointments.length + 1];

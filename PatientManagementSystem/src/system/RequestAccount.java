@@ -25,7 +25,7 @@ public class RequestAccount implements Serializable {
         return Firstname;
     }
 
-    public String setFirstname(String Firstname) {
+    public void setFirstname(String Firstname) {
         this.Firstname = Firstname;
     }
 
@@ -33,7 +33,7 @@ public class RequestAccount implements Serializable {
         return Lastname;
     }
 
-    public String setLastname(String Lastname) {
+    public void setLastname(String Lastname) {
         this.Lastname = Lastname;
     }
 
@@ -41,7 +41,7 @@ public class RequestAccount implements Serializable {
         return Password;
     }
 
-    public String setPassword(String Password) {
+    public void setPassword(String Password) {
         this.Password = Password;
     }
 
@@ -49,7 +49,7 @@ public class RequestAccount implements Serializable {
         return Address;
     }
 
-    public String setAddress(String Address) {
+    public void setAddress(String Address) {
         this.Address = Address;
     }
 
@@ -57,7 +57,7 @@ public class RequestAccount implements Serializable {
         return Gender;
     }
 
-    public String setGender(String Gender) {
+    public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
@@ -65,11 +65,11 @@ public class RequestAccount implements Serializable {
         return DoB;
     }
 
-    public String setDoB(String DoB) {
+    public void setDoB(String DoB) {
         this.DoB = DoB;
     }
 
-    public RequestAccount addRequestAccount(RequestAccount newRequestAccount) {
+    public void addRequestAccount(RequestAccount newRequestAccount) {
         int i;
         
         RequestAccount[] store = new RequestAccount[RequestAccounts.length + 1];
@@ -84,7 +84,7 @@ public class RequestAccount implements Serializable {
         getRequestAccounts();
     }
 
-    public RequestAccount removeRequestAccount(RequestAccount removeRequestAccount) {
+    public void removeRequestAccount(RequestAccount removeRequestAccount) {
         int i = 0;
         
         RequestAccount[] store = new RequestAccount[RequestAccounts.length - 1];

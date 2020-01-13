@@ -17,7 +17,7 @@ public class Medicine {
         return Name;
     }
 
-    public String setName(String Name) {
+    public void setName(String Name) {
         this.Name = Name;
     }
 
@@ -25,11 +25,11 @@ public class Medicine {
         return Stock;
     }
 
-    public int setStock(int Stock) {
+    public void setStock(int Stock) {
         this.Stock = Stock;
     }
 
-    public Medicine addMedicine(Medicine newMedicine) {
+    public void addMedicine(Medicine newMedicine) {
         int i;
         
         Medicine[] store = new Medicine[medicines.length + 1];
