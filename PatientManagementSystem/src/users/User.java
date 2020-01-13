@@ -205,6 +205,17 @@ public class User {
     }
 
     public static void setUsers() {
+        User[] store = {
+            new Patient("P001","Sam","Jordan","password","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
+            new Patient("P002","Owen","Howarth","password","56 Clothworth,\n Plymouth,\nPL94RU",null,"M","13/10/2000"),
+            new Patient("P003","Imogen","Jones","password","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999"),
+            new Doctor("D001","Jeffrey","Halbert","password","8 Hillside,\n Plymouth,\nPL63TQ",null),
+            new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
+            new Doctor("D003","Fraser","Mcdodal","password","94 Dalphos,\nBristol,\nBR73RD",null),
+            new Admin("A001","Samuel","Jordan","password","44 Merrifieids,\nTaunton,\nTA41PE",null),
+            new Secretary("S001","Katie","Stones","password","46 Telphos,\nPortsmouth,\nPO23PP",null)
+        };
         
+        users = store;
     }
 }
