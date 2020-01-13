@@ -75,7 +75,7 @@ public class Appointment {
 
     public static void getAppointments() {
         Appointment[] store = null;
-        String filename = "data/appointments.ser";
+        String filename = "files/appointments.ser";
         try
         {    
             FileInputStream file = new FileInputStream(filename); 
@@ -94,7 +94,7 @@ public class Appointment {
     }
 
     public static void saveAppointments() {
-        String filename = "data/appointments.ser"; 
+        String filename = "files/appointments.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -115,13 +115,15 @@ public class Appointment {
             new Appointment(
                     new Doctor("D001","Jeffrey","Halbert","password","8 Hillside,\n Plymouth,\nPL63TQ",null),
                     new Patient("P001","Sam","Jordan","password","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
+                    "3/01/2020 12:45"),
             new Appointment(
                     new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
                     new Patient("P003","Imogen","Jones","password","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999"),
-                    "28/12/2019 13:35"),
+                    "2/01/2020 16:05"),
             new Appointment(
                     new Doctor("D003","Fraser","Mcdodal","password","94 Dalphos,\nBristol,\nBR73RD",null), 
                     new Patient("P002","Owen","Howarth","password","56 Clothworth,\n Plymouth,\nPL94RU",null,"M","13/10/2000"),
+                    "8/01/2020 13:00"),
         };
         
         appointments = store;

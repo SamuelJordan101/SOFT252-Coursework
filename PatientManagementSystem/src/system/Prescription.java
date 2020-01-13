@@ -1,84 +1,146 @@
 package system;
 
-public class Prescription {
+import java.io.*;
+import users.*;
+
+public class Prescription implements Serializable {
 
     public static Prescription[] prescriptions;
 
     private Doctor Doctor;
-
     private Patient Patient;
-
     private String Notes;
-
     private Medicine Medicine;
-
     private int Quantity;
-
     private String Dosage;
 
     public Prescription(Doctor Doctor, Patient Patient, String Notes, Medicine Medicine, int Quantity, String Dosage) {
+        this.Doctor = Doctor;
+        this.Patient = Patient;
+        this.Notes = Notes;
+        this.Medicine = Medicine;
+        this.Quantity = Quantity;
+        this.Dosage = Dosage;
     }
 
     public Doctor getDoctor() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Doctor;
     }
 
     public Doctor setDoctor(Doctor Doctor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Doctor = Doctor;
     }
 
     public Patient getPatient() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Patient;
     }
 
     public Patient setPatient(Patient Patient) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Patient = Patient;
     }
 
     public String getNotes() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Notes;
     }
 
     public String setNotes(String Notes) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Notes = Notes;
     }
 
     public Medicine getMedicine() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Medicine;
     }
 
     public Medicine setMedicine(Medicine Medicine) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Medicine = Medicine;
     }
 
     public int getQuantity() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Quantity;
     }
 
     public int setQuantity(int Quantity) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Quantity = Quantity;
     }
 
     public String getDosage() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Dosage;
     }
 
     public String setDosage(String Dosage) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Dosage = Dosage;
     }
 
     public Prescription removePrescription(Prescription removePrescription) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i = 0;
+        
+        Prescription[] store = new Prescription[prescriptions.length - 1];
+        
+        for(Prescription prescription : Prescription.prescriptions) {
+            if(prescription != removePrescription) {
+                store[i] = prescription;
+                i++;
+            }
+        }
+        
+        prescriptions = store;
+        
+        savePrescriptions();
+        getPrescriptions();
     }
 
     public Prescription addPrescription(Prescription newPrescription) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i;
+        
+        Prescription[] store = new Prescription[prescriptions.length + 1];
+        
+        for(i = 0;i < store.length - 1; i++) {
+            store[i] = prescriptions[i];
+        }
+        
+        store[i] = newPrescription;
+        prescriptions = store;
+        
+        savePrescriptions();
+        getPrescriptions();
     }
 
     public static void savePrescriptions() {
+        String filename = "data/prescriptions.ser"; 
+           
+        try {    
+            FileOutputStream file = new FileOutputStream(filename); 
+            ObjectOutputStream out = new ObjectOutputStream(file); 
+              
+            out.writeObject(prescriptions); 
+              
+            out.close(); 
+            file.close(); 
+        } 
+        catch(IOException ex) { 
+            System.out.println("Error: " +  ex); 
+        } 
     }
 
     public static void getPrescriptions() {
+        Prescription[] store = null;
+        String filename = "files/prescriptions.ser";
+        
+        try {    
+            FileInputStream file = new FileInputStream(filename); 
+            ObjectInputStream in = new ObjectInputStream(file); 
+              
+            store = (Prescription[])in.readObject(); 
+              
+            in.close(); 
+            file.close(); 
+        } 
+          
+        catch(IOException ex) { 
+            System.out.println("Error: " + ex); 
+        } 
+        
+        prescriptions = store;
     }
 
     public static void setPrescriptions() {

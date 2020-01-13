@@ -46,7 +46,7 @@ public class Medicine {
 
     public static void getMedicine() {
         Medicine[] store = null;
-        String filename = "data/medicines.ser";
+        String filename = "files/medicines.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 
@@ -66,7 +66,7 @@ public class Medicine {
     }
 
     public static void saveMedicine() {
-        String filename = "data/medicines.ser"; 
+        String filename = "files/medicines.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -84,19 +84,15 @@ public class Medicine {
     }
 
     public static void setMedicine() {
-        Medicine[] temp = {
-            new Medicine("Chlorpromazine", 5),
-            new Medicine("Polio Vaccine", 7),
-            new Medicine("Oral Contraceptives", 3),
-            new Medicine("Penicillin", 3),
-            new Medicine("Beta Blocker", 15),
-            new Medicine("Beta2 Agonists", 25),
-            new Medicine("Tamoxifen", 3),
-            new Medicine("Immunosuppressants", 27),
-            new Medicine("HIV/AIDS Antiretrovirals", 18),
-            new Medicine("MMR Vaccine", 11)
+        Medicine[] store = {
+            new Medicine("Amoxicillin", 50),
+            new Medicine("Omeprazole", 70),
+            new Medicine("Cetirizine Hydrochloride", 30),
+            new Medicine("Propranalol", 30),
+            new Medicine("Citalopram", 15),
+            new Medicine("Nifedipine", 25),
         };
         
-        medicines = temp;
+        medicines = store;
     }
 }

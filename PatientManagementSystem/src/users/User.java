@@ -109,7 +109,7 @@ public class User implements Serializable{
     }
 
     public static void saveUsers() {
-        String filename = "data/users."; 
+        String filename = "files/users."; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -128,7 +128,7 @@ public class User implements Serializable{
 
     public static void getUsers() {
         User[] store = null;
-        String filename = "data/users.ser";
+        String filename = "files/users.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 

@@ -57,7 +57,7 @@ public class Feedback implements Serializable{
 
     public static void getFeedback() {
         Feedback[] store = null;
-        String filename = "data/feedback.ser";
+        String filename = "files/feedback.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 
@@ -77,7 +77,7 @@ public class Feedback implements Serializable{
     }
 
     public static void saveFeedback() {
-        String filename = "data/feedback.ser"; 
+        String filename = "files/feedback.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 

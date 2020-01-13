@@ -1,17 +1,20 @@
 package system;
 
+import java.io.*;
+
 public class Notification {
 
-    private String message;
+    private String Message;
 
-    public Notification(String message) {
+    public Notification(String Message) {
+        this.Message = Message;
     }
 
     public String getMessage() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Message;
     }
 
-    public String setMessage(String message) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String setMessage(String Message) {
+        this.Message = Message;
     }
 }
