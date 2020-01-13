@@ -1,52 +1,111 @@
 package system;
 
-public class Feedback {
+import users.*;
+import java.io.*;
+
+public class Feedback implements Serializable{
 
     public static Feedback[] feedback;
-
     private Doctor Doctor;
-
-    private double Rating;
-
+    private float Rating;
     private String Notes;
 
-    public Feedback(Doctor Doctor, double Rating, String Notes) {
+    public Feedback(Doctor Doctor, float Rating, String Notes) {
+        this.Doctor = Doctor;
+        this.Rating = Rating;
+        this.Notes = Notes;
     }
 
     public Doctor getDoctor() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Doctor;
     }
 
     public Doctor setDoctor(Doctor Doctor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Doctor = Doctor;
     }
 
     public float getRating() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Rating;
     }
 
-    public float setRating(double Rating) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public float setRating(float Rating) {
+        this.Rating = Rating;
     }
 
     public String getNotes() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return Notes;
     }
 
     public String setNotes(String Notes) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.Notes = Notes;
     }
 
     public Feedback addFeedback(Feedback newFeedback) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i;
+        
+        Feedback[] store = new Feedback[feedback.length + 1];
+        
+        for(i=0;i<store.length-1;i++)
+            store[i] = feedback[i];
+        
+        store[i] = newFeedback;
+        feedback = store;
+        
+        saveFeedback();
+        getFeedback();
     }
 
     public static void getFeedback() {
+        Feedback[] store = null;
+        String filename = "data/feedback.ser";
+        
+        try {    
+            FileInputStream file = new FileInputStream(filename); 
+            ObjectInputStream in = new ObjectInputStream(file); 
+              
+            store = (Feedback[])in.readObject(); 
+              
+            in.close(); 
+            file.close(); 
+        } 
+          
+        catch(IOException ex) { 
+            System.out.println("Error: " + ex); 
+        } 
+        
+        feedback = store;
     }
 
     public static void saveFeedback() {
+        String filename = "data/feedback.ser"; 
+          
+        try {    
+            FileOutputStream file = new FileOutputStream(filename); 
+            ObjectOutputStream out = new ObjectOutputStream(file); 
+              
+            out.writeObject(feedback); 
+              
+            out.close(); 
+            file.close(); 
+        } 
+          
+        catch(IOException ex) { 
+            System.out.println("Error: " +  ex); 
+        } 
     }
 
     public static void setFeedback() {
+        Feedback[] temp = {
+            new Feedback(
+                new Doctor("D001","Jeffrey","Halbert","password","8 Hillside,\n Plymouth,\nPL63TQ",null),
+                10, "Very nice, very helpful"),
+            new Feedback(
+                new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
+                5, "Was alright, did their job"),
+            new Feedback(
+                new Doctor("D003","Fraser","Mcdodal","password","94 Dalphos,\nBristol,\nBR73RD",null),
+                0, "Was very late and then didn't even help me")
+        };
+        feedback = temp;
     }
 }

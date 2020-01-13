@@ -139,10 +139,7 @@ public class User implements Serializable{
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("IOException is caught: " + ex); 
-        } 
-        catch(ClassNotFoundException ex) { 
-            System.out.println("ClassNotFoundException is caught"); 
+            System.out.println("Error: " + ex); 
         } 
         
         User.users = store;

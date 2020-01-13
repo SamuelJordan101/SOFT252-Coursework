@@ -123,13 +123,13 @@
       <Fields>
         <Field name="feedback" type="Feedback[]" visibility="public" isStatic="true"/>
         <Field name="Doctor" type="Doctor" visibility="private"/>
-        <Field name="Rating" type="double" visibility="private"/>
+        <Field name="Rating" type="float" visibility="private"/>
         <Field name="Notes" type="String" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="Doctor" name="Doctor"/>
-          <Argument type="double" name="Rating"/>
+          <Argument type="float" name="Rating"/>
           <Argument type="String" name="Notes"/>
         </Constructor>
       </Constructors>
@@ -534,49 +534,49 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="Notification" source="users.User" target="system.Notification" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="users.User" target="users.User" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestPrescription" target="system.RequestPrescription" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestFeedback" target="system.Feedback"/>
-    <HasRelation name="Medicine" source="system.Prescription" target="system.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Prescription" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="users.Admin" target="users.User"/>
-    <HasRelation name="loggedUser" source="users.User" target="users.User" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.PastAppointment" target="system.Appointment"/>
-    <UseRelation source="system.Appointment" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestMedicine" target="system.Medicine"/>
-    <UseRelation source="system.Feedback" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.RequestTermination" target="system.RequestTermination" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.RequestAccount" target="system.RequestAccount" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="Doctor" source="system.Feedback" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.RequestPrescription" target="system.RequestPrescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.RequestAppointment" target="system.RequestAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.PastAppointment" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loggedUser" source="users.User" target="users.User" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Appointment" target="system.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.Secretary" target="users.Secretary" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="users.Doctor" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="Patient" source="system.Prescription" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.Feedback" target="system.Feedback" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="users.Patient" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="system.RequestPrescription" target="system.Prescription"/>
+    <IsRelation name="is" source="users.Admin" target="users.User"/>
+    <IsRelation name="is" source="system.PastAppointment" target="system.Appointment"/>
+    <HasRelation name="pastPrescription" source="system.PastAppointment" target="system.Prescription" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Patient" source="system.Appointment" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Appointment" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.Medicine" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.RequestMedicine" target="system.RequestMedicine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.PastAppointment" target="system.PastAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="system.RequestAppointment" target="system.Appointment"/>
+    <UseRelation source="system.RequestTermination" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="system.RequestFeedback" target="system.Feedback"/>
+    <UseRelation name="" source="users.User" target="users.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="system.RequestMedicine" target="system.Medicine"/>
+    <HasRelation name="Patient" source="system.RequestTermination" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Doctor" source="system.Appointment" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Prescription" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.RequestFeedback" target="system.RequestFeedback" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Prescription" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="users.Patient" target="users.User"/>
+    <HasRelation name="Medicine" source="system.Prescription" target="system.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.Patient" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Notification" source="users.User" target="system.Notification" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Feedback" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.Admin" target="users.Admin" sourceCardinality="1..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="users.Doctor" target="users.User"/>
     <IsRelation name="is" source="users.Secretary" target="users.User"/>
-    <UseRelation source="users.Admin" target="users.Admin" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="users.Secretary" target="users.Secretary" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.PastAppointment" target="system.PastAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Doctor" source="system.Appointment" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestFeedback" target="system.RequestFeedback" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.RequestMedicine" target="system.RequestMedicine" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="system.Prescription" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Appointment" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="pastPrescription" source="system.PastAppointment" target="system.Prescription" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestTermination" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.Medicine" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Patient" source="system.RequestTermination" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="users.Doctor" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestPrescription" target="system.Prescription"/>
-    <UseRelation source="system.RequestAppointment" target="system.RequestAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Doctor" source="system.Prescription" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.RequestAccount" target="system.RequestAccount" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Appointment" target="system.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="system.Prescription" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Prescription" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="users.User" target="system.Notification" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestTermination" target="system.RequestTermination" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Patient" source="system.Appointment" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.PastAppointment" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="users.Patient" target="users.User"/>
+    <HasRelation name="Doctor" source="system.Prescription" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.Feedback" target="system.Feedback" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Appointment" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
