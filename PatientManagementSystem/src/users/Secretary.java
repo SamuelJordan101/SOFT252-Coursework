@@ -10,7 +10,7 @@ public class Secretary extends User {
         super(ID,Firstname,Lastname,Password,Address,Message);
     }
 
-    public Secretary addSecretary(Secretary newSecretary) {
+    public void addSecretary(Secretary newSecretary) {
         int i;
         
         Secretary[] store = new Secretary[secretarys.length + 1];

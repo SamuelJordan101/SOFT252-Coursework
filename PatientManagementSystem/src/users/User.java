@@ -2,23 +2,17 @@ package users;
 
 import java.io.Serializable;
 import java.io.*;
+import system.Notification;
 
 public class User implements Serializable{
 
     public static User[] users;
-
     public static User loggedUser;
-
     private String ID;
-
     private String Firstname;
-
     private String Lastname;
-
     private String Password;
-
     private String Address;
-
     private Notification Notification;
 
     public User(String ID, String Firstname, String Lastname, String Password, String Address, Notification Notification) {
@@ -34,7 +28,7 @@ public class User implements Serializable{
         return ID;
     }
 
-    public String setID(String ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
@@ -42,7 +36,7 @@ public class User implements Serializable{
         return Firstname;
     }
 
-    public String setFirstname(String Firstname) {
+    public void setFirstname(String Firstname) {
         this.Firstname = Firstname;
     }
 
@@ -50,7 +44,7 @@ public class User implements Serializable{
         return Lastname;
     }
 
-    public String setLastname(String Lastname) {
+    public void setLastname(String Lastname) {
         this.Lastname = Lastname;
     }
 
@@ -58,7 +52,7 @@ public class User implements Serializable{
         return Password;
     }
 
-    public String setPassword(String Password) {
+    public void setPassword(String Password) {
         this.Password = Password;
     }
 
@@ -66,19 +60,19 @@ public class User implements Serializable{
         return Address;
     }
 
-    public String setAddress(String Address) {
+    public void setAddress(String Address) {
         this.Address = Address;
     }
 
     public Notification getNotification() {
-        Return Notification;
+        return Notification;
     }
 
-    public Notification setNotification(Notification Notification) {
+    public void setNotification(Notification Notification) {
         this.Notification = Notification;
     }
 
-    public User removeUser(User removeUser) {
+    public void removeUser(User removeUser) {
         int i = 0;
         
         User[] store = new User[users.length - 1];
@@ -94,7 +88,7 @@ public class User implements Serializable{
         saveUsers();
     }
 
-    public User addUser(User newUser) {
+    public void addUser(User newUser) {
         int i;
         
         User[] store = new User[users.length + 1];

@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package guis;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import users.*;
+import system.*;
 
 /**
  *
@@ -16,6 +21,27 @@ public class Admin extends javax.swing.JFrame {
      */
     public Admin() {
         initComponents();
+        getUserInfo();
+        getDoctors();
+        setFeedbackRequests();
+    }
+    
+    private void getUserInfo()
+    {
+        Notification notification = User.loggedUser.getNotification();
+        
+        if(notification != null)
+        {
+            JOptionPane.showMessageDialog(this, notification.getMessage(), "WELCOME", 
+                    JOptionPane.INFORMATION_MESSAGE);
+            User.loggedUser.setNotification(null);
+            User.saveUsers();
+        }
+        
+        this.txtUserAccountType.setText("Admin");
+        this.txtUserID.setText(User.loggedUser.getID());
+        this.txtUserName.setText(User.loggedUser.getForename() + " " + User.loggedUser.getSurname());
+        this.txtUserAddress.setText(User.loggedUser.getAddress());
     }
 
     /**
@@ -222,9 +248,9 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateDoctor)
-                    .addComponent(btnCreateSecretary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateSecretary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCreateDoctor))
                 .addContainerGap())
         );
 
@@ -495,27 +521,21 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane tabAdmin;
     private javax.swing.JTable tblDoctorFeedback;
     private javax.swing.JTable tblDoctorFeedbackApprove;

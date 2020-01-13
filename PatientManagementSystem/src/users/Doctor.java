@@ -10,7 +10,7 @@ public class Doctor extends User {
         super(ID,Firstname,Lastname,Password,Address,Message);
     }
 
-    public Doctor addDoctor(Doctor newDoctor) {
+    public void addDoctor(Doctor newDoctor) {
         int i;
         
         Doctor[] store = new Doctor[doctors.length + 1];

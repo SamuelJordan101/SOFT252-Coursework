@@ -5,13 +5,11 @@ import system.Notification;
 public class Patient extends User {
 
     public static Patient[] patients;
-
     private String Gender;
-
     private String DoB;
 
     public Patient(String ID, String Firstname, String Lastname, String Password, String Address, Notification Message, String Gender, String DoB) {
-        super(ID,Firstname,Lastname,Password,Address,Message,Gender,DoB);
+        super(ID,Firstname,Lastname,Password,Address,Message);
         this.Gender = Gender;
         this.DoB = DoB;
     }
@@ -20,7 +18,7 @@ public class Patient extends User {
         return Gender;
     }
 
-    public String setGender(String Gender) {
+    public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
@@ -28,11 +26,11 @@ public class Patient extends User {
         return DoB;
     }
 
-    public String setDoB(String DoB) {
+    public void setDoB(String DoB) {
         this.DoB = DoB;
     }
 
-    public Patient removePatient(Patient removePatient) {
+    public void removePatient(Patient removePatient) {
         int i = 0;
         
         Patient[] store = new Patient[patients.length - 1];
@@ -47,7 +45,7 @@ public class Patient extends User {
         removeUser(removePatient);
     }
 
-    public Patient addPatient(Patient newPatient) {
+    public void addPatient(Patient newPatient) {
         int i;
         
         Patient[] store = new Patient[patients.length + 1];

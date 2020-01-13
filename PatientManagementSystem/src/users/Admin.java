@@ -10,7 +10,7 @@ public class Admin extends User {
         super(ID,Firstname,Lastname,Password,Address,Message);
     }
 
-    public Admin addAdmin(Admin newAdmin) {
+    public void addAdmin(Admin newAdmin) {
         int i;
         
         Admin[] store = new Admin[admins.length + 1];
