@@ -68,9 +68,11 @@ public class Feedback implements Serializable{
             in.close(); 
             file.close(); 
         } 
-          
         catch(IOException ex) { 
             System.out.println("Error: " + ex); 
+        } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException"); 
         } 
         
         feedback = store;

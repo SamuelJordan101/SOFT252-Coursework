@@ -103,9 +103,9 @@ public class RequestAccount implements Serializable {
 
     public static void getRequestAccounts() {
         RequestAccount[] store = null;
-        String filename = "files/RequestAccounts.ser";
-        try
-        {    
+        String filename = "data/RequestAccounts.ser";
+        
+        try {    
             FileInputStream file = new FileInputStream(filename); 
             ObjectInputStream in = new ObjectInputStream(file); 
               
@@ -113,9 +113,12 @@ public class RequestAccount implements Serializable {
               
             in.close(); 
             file.close(); 
-        }  
+        } 
         catch(IOException ex) { 
             System.out.println("Error: " + ex); 
+        } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException"); 
         } 
         
         RequestAccounts = store;
@@ -136,13 +139,17 @@ public class RequestAccount implements Serializable {
             out.close(); 
             file.close(); 
         } 
-          
-        catch(IOException ex) 
-        { 
+        catch(IOException ex) { 
             System.out.println("IOException is caught: " +  ex); 
         } 
     }
 
     public static void setRequestAccounts() {
+        RequestAccount[] store = {
+            new RequestAccount("password","Jeff", "Gibbs", "Tinyhouse,\nPlyouth,\nPL63TL", "M", "17/07/1984"),
+            new RequestAccount("password", "Jane", "Handle", "Empire,\nLondon,\nLN25DN", "F", "09/06/2000")
+        };
+        
+        RequestAccounts = store;
     }
 }

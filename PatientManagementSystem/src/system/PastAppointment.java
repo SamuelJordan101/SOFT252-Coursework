@@ -49,9 +49,11 @@ public class PastAppointment extends Appointment {
             in.close(); 
             file.close(); 
         } 
-          
         catch(IOException ex) { 
             System.out.println("Error: " + ex); 
+        } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException"); 
         } 
         
         pastAppointments = store;

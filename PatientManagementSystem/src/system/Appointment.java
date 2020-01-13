@@ -89,6 +89,9 @@ public class Appointment {
         catch(IOException ex){ 
             System.out.println("Error: " + ex); 
         } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException"); 
+        } 
         
         Appointment.appointments = store;
     }

@@ -141,6 +141,9 @@ public class User implements Serializable{
         catch(IOException ex) { 
             System.out.println("Error: " + ex); 
         } 
+        catch(ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException"); 
+        } 
         
         User.users = store;
         sortUsers();

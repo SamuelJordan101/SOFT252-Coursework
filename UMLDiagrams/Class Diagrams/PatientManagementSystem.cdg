@@ -328,7 +328,7 @@
     </Class>
     <Class name="RequestPrescription" package="system" visibility="public" xPosition="2215.0" yPosition="2020.0">
       <Fields>
-        <Field name="RequestPrescription" type="RequestPrescription[]" visibility="public" isStatic="true"/>
+        <Field name="RequestPrescriptions" type="RequestPrescription[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
