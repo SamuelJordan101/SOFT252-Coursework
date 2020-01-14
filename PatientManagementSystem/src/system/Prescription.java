@@ -104,6 +104,8 @@ public class Prescription implements Serializable{
     }
     
     public static void savePrescriptions() {
+        //saves prescriptions to file
+        
         String filename = "info/prescriptions.ser"; 
           
         try {  
@@ -121,6 +123,8 @@ public class Prescription implements Serializable{
     }
     
     public static void getPrescriptions() {
+        //gets prescriptions from file
+        
         Prescription[] store = null;
         String filename = "info/prescriptions.ser";
         
@@ -134,7 +138,7 @@ public class Prescription implements Serializable{
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("IOException is caught: " + ex); 
+            System.out.println("Error: " + ex); 
         } 
         catch(ClassNotFoundException ex) { 
             System.out.println("ClassNotFoundException is caught"); 
@@ -144,6 +148,8 @@ public class Prescription implements Serializable{
     }
     
     public static void setPrescriptions() {
+        //sets default data
+        
         Prescription[] store = {
             new Prescription(
                 new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null),

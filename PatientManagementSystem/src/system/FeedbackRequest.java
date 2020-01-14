@@ -30,8 +30,9 @@ public class FeedbackRequest extends Feedback{
         getFeedbackRequests();
     }
     
-    public static void saveFeedbackRequests()
-    {
+    public static void saveFeedbackRequests() {
+        //saves feedback requests to file
+        
         String filename = "info/feedbackRequests.ser"; 
           
         try {    
@@ -48,8 +49,9 @@ public class FeedbackRequest extends Feedback{
         } 
     }
     
-    public static void getFeedbackRequests()
-    {
+    public static void getFeedbackRequests() {
+        //gets feedback requests from file
+        
         FeedbackRequest[] store = null;
         String filename = "info/feedbackRequests.ser";
         
@@ -74,6 +76,8 @@ public class FeedbackRequest extends Feedback{
     
     public static void setFeedbackRequests()
     {
+        //setss default data
+        
         FeedbackRequest[] store ={
             new FeedbackRequest(
                 new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

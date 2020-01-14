@@ -43,6 +43,8 @@ public class AppointmentRequest extends Appointment {
     }
     
     public static void saveAppointmentRequests() {
+        //saves appointment requests to file
+        
         String filename = "info/appointmentRequests.ser"; 
 
         try {    
@@ -60,6 +62,8 @@ public class AppointmentRequest extends Appointment {
     }
     
     public static void getAppointmentRequests() {
+        //gets appointment \requests from file
+        
         AppointmentRequest[] store = null;
         String filename = "info/appointmentRequests.ser";
         
@@ -82,8 +86,9 @@ public class AppointmentRequest extends Appointment {
         appointmentRequests = store;
     }
     
-    public static void setAppointmentRequests()
-    {
+    public static void setAppointmentRequests() {
+        //sets default data
+        
         AppointmentRequest[] store = {
             new AppointmentRequest(
                 new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

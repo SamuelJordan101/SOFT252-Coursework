@@ -30,6 +30,9 @@ public class DoctorIT {
         newDoctor.addUser(newDoctor);
         
         boolean error;
+        
+        //tests that adding a user works fully
+        
         if(User.users[User.users.length - 1].getID().equals(newDoctor.getID())){
             error = false;
         } else {

@@ -46,6 +46,8 @@ public class Medicine implements Serializable{
     }
     
     public static void getMedicine() {
+        //gets medicines from file
+        
         Medicine[] store = null;
         String filename = "info/medicines.ser";
         
@@ -69,6 +71,8 @@ public class Medicine implements Serializable{
     }
     
     public static void saveMedicine() {
+        //saves medicines to file
+        
         String filename = "info/medicines.ser"; 
           
         try {    
@@ -85,8 +89,9 @@ public class Medicine implements Serializable{
         } 
     }
     
-    public static void setMedicine()
-    {   
+    public static void setMedicine() {
+        //sets default data
+        
         Medicine[] store = {
             new Medicine("Propranalol", 4),
             new Medicine("Paracetamol", 15),

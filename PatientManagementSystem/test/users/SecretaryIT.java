@@ -31,6 +31,9 @@ public class SecretaryIT {
         newSecretary.addUser(newSecretary);
         
         boolean error;
+        
+        //tests that adding a user works fully
+        
         if(User.users[User.users.length - 1].getID().equals(newSecretary.getID())){
             error = false;
         } else {

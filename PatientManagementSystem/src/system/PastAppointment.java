@@ -37,6 +37,8 @@ public class PastAppointment extends Appointment{
     }
     
     public static void getPastAppointments() {
+        //gets past appointments from file
+        
         PastAppointment[] store = null;
         String filename = "info/pastAppointments.ser";
         
@@ -59,8 +61,9 @@ public class PastAppointment extends Appointment{
         pastAppointments = store;
     }
     
-    public static void savePastAppointments()
-    {
+    public static void savePastAppointments() {
+        //saves past appointments to file
+        
         String filename = "info/pastAppointments.ser"; 
           
         try {    
@@ -78,6 +81,8 @@ public class PastAppointment extends Appointment{
     }
     
     public static void setPastAppointments() {
+        //sets default data
+        
         PastAppointment[] store = {
             new PastAppointment(
                 new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

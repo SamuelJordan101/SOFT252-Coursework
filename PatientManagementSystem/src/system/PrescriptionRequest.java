@@ -45,6 +45,8 @@ public class PrescriptionRequest extends Prescription {
     }
     
     public static void getPrescriptionRequests() {
+        //gets prescription requests from file
+        
         PrescriptionRequest[] store = null;
         String filename = "info/prescriptionRequests.ser";
         
@@ -67,8 +69,9 @@ public class PrescriptionRequest extends Prescription {
         prescriptionRequests = store;
     }
     
-    public static void savePrescriptionRequests()
-    {
+    public static void savePrescriptionRequests() {
+        //saves prescription requests to file
+        
         String filename = "info/prescriptionRequests.ser"; 
           
         try {    
@@ -85,8 +88,9 @@ public class PrescriptionRequest extends Prescription {
         }
     }
     
-    public static void setPrescriptionRequests()
-    {
+    public static void setPrescriptionRequests() {
+        //sets default data
+        
         PrescriptionRequest[] store = {
             new PrescriptionRequest(
                 new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

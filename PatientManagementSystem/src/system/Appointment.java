@@ -76,6 +76,8 @@ public class Appointment implements Serializable {
     
     public static void getAppointments()
     {
+        //gets appointments from file
+        
         Appointment[] store = null;
         String filename = "info/appointments.ser";
         
@@ -100,6 +102,8 @@ public class Appointment implements Serializable {
     
     public static void saveAppointments()
     {
+        //saves appointments to file
+        
         String filename = "info/appointments.ser"; 
           
         try {    
@@ -116,8 +120,9 @@ public class Appointment implements Serializable {
         } 
     }
     
-    public static void setAppointments()
-    {   
+    public static void setAppointments() {   
+        //Default data
+        
         Appointment[] store = {
             new Appointment(
                     new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

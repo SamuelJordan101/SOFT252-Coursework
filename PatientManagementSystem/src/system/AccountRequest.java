@@ -71,6 +71,7 @@ public class AccountRequest implements Serializable {
     }
     
     public void addAccountRequest(AccountRequest newAccountRequest) {
+        
         int i;
         
         AccountRequest[] store = new AccountRequest[accountRequests.length + 1];
@@ -105,6 +106,8 @@ public class AccountRequest implements Serializable {
     
     public static void getAccountRequests()
     {
+        //Gets Account requests from files
+        
         AccountRequest[] store = null;
         String filename = "info/accountRequests.ser";
         try {    
@@ -128,6 +131,8 @@ public class AccountRequest implements Serializable {
     
     public static void saveAccountRequests()
     {
+        //saves account requests to file
+        
         String filename = "info/accountRequests.ser"; 
           
         try {    
@@ -144,8 +149,9 @@ public class AccountRequest implements Serializable {
         } 
     }
     
-    public static void setAccountRequests()
-    {
+    public static void setAccountRequests() {
+        //default data
+        
         AccountRequest[] store = {
             new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99","Geoff", "Gibbs", "15 Starter Lane,\nPlymouth,\nPL83YD", "M", "16/05/1975"),
             new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99", "Amelia", "Dom", "84 Mouldon,\nPlymouth,\nPL45TF", "F", "13/11/1976")

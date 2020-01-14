@@ -54,6 +54,8 @@ public class TerminationRequest implements Serializable{
     }
     
     public static void getTerminationRequests() {
+        //gets termination requests from file
+        
         TerminationRequest[] store = null;
         String filename = "info/terminationRequests.ser";
         
@@ -67,7 +69,7 @@ public class TerminationRequest implements Serializable{
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("Error  is caught: " + ex); 
+            System.out.println("Error is caught: " + ex); 
         }  
         catch(ClassNotFoundException ex) { 
             System.out.println("ClassNotFoundException is caught"); 
@@ -76,8 +78,9 @@ public class TerminationRequest implements Serializable{
         terminationRequests = store;
     }
     
-    public static void saveTerminationRequests()
-    {
+    public static void saveTerminationRequests() {
+        //saves termination requests to file
+        
         String filename = "info/terminationRequests.ser"; 
           
         try {    
@@ -95,6 +98,8 @@ public class TerminationRequest implements Serializable{
     }
     
     public static void setTerminationRequests() {
+        //sets default data
+        
         TerminationRequest[] store = {
             new TerminationRequest(new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99","Sam", "Jordan", "66 Merrifields,\nPlymouth,\nPL36JN", null, "F", "10/08/1992")),
             new TerminationRequest(new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99","Katie", "Evans", "574 Mutley Plain,\nPlymouth,\nPL93GH", null, "M", "29/02/2000"))

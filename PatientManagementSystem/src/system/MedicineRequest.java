@@ -43,6 +43,8 @@ public class MedicineRequest extends Medicine{
     }
     
     public static void getMedicineRequests() {
+        //gets medicine requests from file
+        
         MedicineRequest[] store = null;
         String filename = "info/medicineRequests.ser";
         
@@ -65,8 +67,9 @@ public class MedicineRequest extends Medicine{
         medicineRequests = store;
     }
     
-    public static void saveMedicineRequests()
-    {
+    public static void saveMedicineRequests() {
+        //saves medicine requests to file
+        
         String filename = "info/medicineRequests.ser"; 
           
         try {    
@@ -83,8 +86,9 @@ public class MedicineRequest extends Medicine{
         }
     }
     
-    public static void setMedicineRequests()
-    {
+    public static void setMedicineRequests() {
+        //sets default data
+        
         MedicineRequest[] store = {
             new MedicineRequest("Propranalol", 45),
             new MedicineRequest("Paracetamol", 33)

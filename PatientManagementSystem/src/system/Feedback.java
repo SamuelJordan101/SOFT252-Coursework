@@ -56,6 +56,8 @@ public class Feedback implements Serializable {
     }
     
     public static void getFeedback() {
+        //gets feedback from file
+        
         Feedback[] store = null;
         String filename = "info/feedback.ser";
         
@@ -78,8 +80,9 @@ public class Feedback implements Serializable {
         feedback = store;
     }
     
-    public static void saveFeedback()
-    {
+    public static void saveFeedback() {
+        //saves feedback to file
+        
         String filename = "info/feedback.ser"; 
           
         try {    
@@ -97,6 +100,8 @@ public class Feedback implements Serializable {
     }
     
     public static void setFeedback() {
+        //sets default data
+        
         Feedback[] store = {
             new Feedback(
                 new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),

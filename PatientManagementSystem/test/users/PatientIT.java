@@ -23,6 +23,8 @@ public class PatientIT {
 
     @Test
     public void testGetGender() {
+        //testing that the gender store works properly
+        
         System.out.println("getGender");
         Login.defaultData();
         
@@ -36,6 +38,8 @@ public class PatientIT {
 
     @Test
     public void testSetGender() {
+        //testing the gender set works properly
+        
         System.out.println("setGender");
         
         String Gender = "F";
@@ -48,6 +52,8 @@ public class PatientIT {
 
     @Test
     public void testGetDOB() {
+        //testing that the dob getting works properly
+        
         System.out.println("getDOB");
         
         Patient instance = (Patient)User.users[0];
@@ -60,6 +66,8 @@ public class PatientIT {
 
     @Test
     public void testSetDOB() {
+        //testing that the dob set works properly
+        
         System.out.println("setDOB");
         
         String DOB = "30/06/2000";
@@ -72,6 +80,8 @@ public class PatientIT {
 
     @Test
     public void testRemovePatient() {
+        //testing that removing a patient works properly
+        
         System.out.println("removePatient");
         
         Patient removePatient = (Patient)User.users[0];
@@ -89,12 +99,17 @@ public class PatientIT {
 
     @Test
     public void testAddPatient() {
+        //testing that adding a patient works properly
+        
         System.out.println("addPatient");
         
         Patient newPatient = new Patient("P004", "password", "Sam", "Jordan", "89 Beechwood Avenue,\nPlymouth,\nPL46PW", null, "M", "30/06/2000");
         newPatient.addUser(newPatient);
         
         boolean error;
+        
+        //tests that adding a user works fully
+        
         if(User.users[User.users.length - 1].getID().equals(newPatient.getID())){
             error = false;
         } else {

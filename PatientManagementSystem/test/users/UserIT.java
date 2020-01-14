@@ -27,6 +27,8 @@ public class UserIT {
 
     @Test
     public void testGetID() {
+        //testing that the id getting works properly
+        
         System.out.println("getID");
         
         User instance = User.users[0];
@@ -38,6 +40,8 @@ public class UserIT {
 
     @Test
     public void testSetID() {
+        //testing that the id setting works properly
+        
         System.out.println("setID");
         
         String ID = "ID";
@@ -49,6 +53,8 @@ public class UserIT {
 
     @Test
     public void testGetPassword() {
+        //testing that the password getting works properly
+        
         System.out.println("getPassword");
         
         User instance = User.users[0];
@@ -62,6 +68,8 @@ public class UserIT {
 
     @Test
     public void testSetPassword() {
+        //testing that the password setting works properly
+        
         System.out.println("setPassword");
         
         String Password = Login.hashPassword("password");
@@ -74,6 +82,8 @@ public class UserIT {
 
     @Test
     public void testGetForename() {
+        //testing that the forename getting works properly
+        
         Login.defaultData();
         System.out.println("getForename");
         
@@ -86,6 +96,8 @@ public class UserIT {
 
     @Test
     public void testSetForename() {
+        //testing that the forename setting works properly
+        
         System.out.println("setForename");
         
         String Forename = "Jack";
@@ -97,6 +109,8 @@ public class UserIT {
 
     @Test
     public void testGetSurname() {
+        //testing that the surname getting works properly
+        
         System.out.println("getSurname");
         
         User instance = User.users[0];
@@ -110,6 +124,8 @@ public class UserIT {
 
     @Test
     public void testSetSurname() {
+        //testing that the surname setting works properly
+        
         System.out.println("setSurname");
         String Surname = "Jones";
         User instance = User.users[0];
@@ -121,6 +137,8 @@ public class UserIT {
 
     @Test
     public void testGetAddress() {
+        //testing that the address getting works properly
+        
         System.out.println("getAddress");
         User instance = User.users[0];
         String expResult = "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ";
@@ -132,6 +150,8 @@ public class UserIT {
 
     @Test
     public void testSetAddress() {
+        //testing that the address setting works properly
+        
         System.out.println("setAddress");
         String Address = "89 Beechwood Avenue,\nPlymouth,\nPL46PW";
         User instance = User.users[0];
@@ -142,6 +162,8 @@ public class UserIT {
 
     @Test
     public void testRemoveUser() {
+        //testing that the user removing works properly
+        
         System.out.println("removeUser");
         User removeUser = User.users[2];
         boolean error;
@@ -160,6 +182,8 @@ public class UserIT {
 
     @Test
     public void testAddUser() {
+        //testing that the user adding works properly 
+        
         Login.defaultData();
         System.out.println("addUser");
         User newUser = new User("A002", "password", "Sam", "Jordan", "89 Beechwood Avenue,\nPlymouth,\nPL46PW", null);
@@ -171,11 +195,13 @@ public class UserIT {
 
     @Test
     public void testSaveUsers() {
+        //testing that the user saving to file works properly
+        
         System.out.println("saveUsers");
         User.saveUsers();
         boolean error;
         
-        String filename = "data/users.ser";
+        String filename = "info/users.ser";
 
         File file = new File(filename);
         
@@ -190,6 +216,8 @@ public class UserIT {
 
     @Test
     public void testGetUsers() {
+        //testing that the user getting works properly
+        
         System.out.println("getUsers");
         User.getUsers();
         boolean error;
@@ -205,6 +233,8 @@ public class UserIT {
 
     @Test
     public void testSetUsers() {
+        //testing that the user setting works properly
+        
         System.out.println("setUsers");
         User.setUsers();
         boolean error;

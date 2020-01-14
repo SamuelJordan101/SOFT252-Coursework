@@ -28,6 +28,8 @@ public class AdminIT {
         
         boolean error;
 
+        //tests that adding a user works fully
+        
         if(User.users[User.users.length - 1].getID().equals(newAdmin.getID())) {
             error = false;
         } else {
