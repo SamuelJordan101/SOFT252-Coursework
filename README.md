@@ -6,10 +6,10 @@ Warning - Login is case sensitive so make sure to enter the right thing e.g. Use
 P001 - password (Sam Jordan) <br>
 P002 - password (Owen Howarth) <br>
 P003 - password (Imogen Jones) <br>
-D003 - password (Jeffrey Halbert) <br>
-D003 - password (Stanley Doorsworth) <br>
+D001 - password (Jeffrey Halbert) <br>
+D002 - password (Stanley Doorsworth) <br>
 D003 - password (Fraser Mcdodal) <br>
-A003 - password (Samuel Jordan) <br>
-S003 - password (Katie Stones) <br>
+A001 - password (Samuel Jordan) <br>
+S001 - password (Katie Stones) <br>
 
 
