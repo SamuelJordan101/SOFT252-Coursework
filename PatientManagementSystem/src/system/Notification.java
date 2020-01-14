@@ -1,20 +1,20 @@
+
 package system;
 
 import java.io.*;
 
-public class Notification implements Serializable {
+public class Notification implements Serializable{
+    private String message;
 
-    private String Message;
-
-    public Notification(String Message) {
-        this.Message = Message;
+    public Notification(String message) {
+        this.message = message;
     }
 
     public String getMessage() {
-        return Message;
+        return message;
     }
 
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

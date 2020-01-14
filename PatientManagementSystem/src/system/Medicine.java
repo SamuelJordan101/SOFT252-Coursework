@@ -1,9 +1,10 @@
+
 package system;
 
 import java.io.*;
 
-public class Medicine {
-
+public class Medicine implements Serializable{
+    
     public static Medicine[] medicines;
     private String Name;
     private int Stock;
@@ -28,7 +29,7 @@ public class Medicine {
     public void setStock(int Stock) {
         this.Stock = Stock;
     }
-
+    
     public void addMedicine(Medicine newMedicine) {
         int i;
         
@@ -43,10 +44,10 @@ public class Medicine {
         saveMedicine();
         getMedicine();
     }
-
+    
     public static void getMedicine() {
         Medicine[] store = null;
-        String filename = "files/medicines.ser";
+        String filename = "info/medicines.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 
@@ -58,17 +59,17 @@ public class Medicine {
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("Error: " + ex); 
+            System.out.println("Error is caught: " + ex); 
         } 
         catch(ClassNotFoundException ex) { 
-            System.out.println("ClassNotFoundException"); 
+            System.out.println("ClassNotFoundException is caught"); 
         } 
         
         medicines = store;
     }
-
+    
     public static void saveMedicine() {
-        String filename = "files/medicines.ser"; 
+        String filename = "info/medicines.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -79,20 +80,24 @@ public class Medicine {
             out.close(); 
             file.close(); 
         } 
-          
         catch(IOException ex) { 
-            System.out.println("Error: " +  ex); 
+            System.out.println("Error is caught: " +  ex); 
         } 
     }
-
-    public static void setMedicine() {
+    
+    public static void setMedicine()
+    {   
         Medicine[] store = {
-            new Medicine("Amoxicillin", 50),
-            new Medicine("Omeprazole", 70),
-            new Medicine("Cetirizine Hydrochloride", 30),
-            new Medicine("Propranalol", 30),
-            new Medicine("Citalopram", 15),
-            new Medicine("Nifedipine", 25),
+            new Medicine("Chlorpromazine", 5),
+            new Medicine("Polio Vaccine", 7),
+            new Medicine("Oral Contraceptives", 3),
+            new Medicine("Penicillin", 3),
+            new Medicine("Beta Blocker", 15),
+            new Medicine("Beta2 Agonists", 25),
+            new Medicine("Tamoxifen", 3),
+            new Medicine("Immunosuppressants", 27),
+            new Medicine("HIV/AIDS Antiretrovirals", 18),
+            new Medicine("MMR Vaccine", 11)
         };
         
         medicines = store;

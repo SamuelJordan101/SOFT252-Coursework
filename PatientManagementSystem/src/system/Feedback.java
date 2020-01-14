@@ -1,16 +1,16 @@
+
 package system;
 
 import users.*;
 import java.io.*;
 
-public class Feedback implements Serializable{
-
+public class Feedback implements Serializable {
     public static Feedback[] feedback;
     private Doctor Doctor;
-    private float Rating;
+    private double Rating;
     private String Notes;
 
-    public Feedback(Doctor Doctor, float Rating, String Notes) {
+    public Feedback(Doctor Doctor, double Rating, String Notes) {
         this.Doctor = Doctor;
         this.Rating = Rating;
         this.Notes = Notes;
@@ -24,11 +24,11 @@ public class Feedback implements Serializable{
         this.Doctor = Doctor;
     }
 
-    public float getRating() {
+    public double getRating() {
         return Rating;
     }
 
-    public void setRating(float Rating) {
+    public void setRating(double Rating) {
         this.Rating = Rating;
     }
 
@@ -39,7 +39,7 @@ public class Feedback implements Serializable{
     public void setNotes(String Notes) {
         this.Notes = Notes;
     }
-
+    
     public void addFeedback(Feedback newFeedback) {
         int i;
         
@@ -54,10 +54,10 @@ public class Feedback implements Serializable{
         saveFeedback();
         getFeedback();
     }
-
+    
     public static void getFeedback() {
         Feedback[] store = null;
-        String filename = "files/feedback.ser";
+        String filename = "info/feedback.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 
@@ -69,17 +69,18 @@ public class Feedback implements Serializable{
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("Error: " + ex); 
+            System.out.println("Error is caught: " + ex); 
         } 
         catch(ClassNotFoundException ex) { 
-            System.out.println("ClassNotFoundException"); 
+            System.out.println("ClassNotFoundException is caught"); 
         } 
         
         feedback = store;
     }
-
-    public static void saveFeedback() {
-        String filename = "files/feedback.ser"; 
+    
+    public static void saveFeedback()
+    {
+        String filename = "info/feedback.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -90,24 +91,32 @@ public class Feedback implements Serializable{
             out.close(); 
             file.close(); 
         } 
-          
         catch(IOException ex) { 
-            System.out.println("Error: " +  ex); 
+            System.out.println("Error is caught: " +  ex); 
         } 
     }
-
+    
     public static void setFeedback() {
-        Feedback[] temp = {
+        Feedback[] store = {
             new Feedback(
-                new Doctor("D001","Jeffrey","Halbert","password","8 Hillside,\n Plymouth,\nPL63TQ",null),
-                10, "Very nice, very helpful"),
+                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
+                7, "Very kind and gentle person."),
             new Feedback(
-                new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
-                5, "Was alright, did their job"),
+                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
+                5, "Nice person but hard to understand."),
             new Feedback(
-                new Doctor("D003","Fraser","Mcdodal","password","94 Dalphos,\nBristol,\nBR73RD",null),
-                0, "Was very late and then didn't even help me")
+                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
+                3, "Seems very rough and confused half the time"),
+            new Feedback(
+                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
+                7, "Very nice doctor."),
+            new Feedback(
+                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
+                9, "Very kind and friendly doctor."),
+            new Feedback(
+                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
+                7, "Always a pleasure to have Dr. Brooks!")
         };
-        feedback = temp;
+        feedback = store;
     }
 }

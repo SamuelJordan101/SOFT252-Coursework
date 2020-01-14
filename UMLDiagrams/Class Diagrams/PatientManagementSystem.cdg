@@ -2,63 +2,63 @@
 
 <ClassDiagram name="Multi-package class diagram">
   <ClassDiagramComponents>
-    <Class name="RequestAccount" package="system" visibility="public" xPosition="2862.0" yPosition="188.0">
+    <Class name="AccountRequest" package="system" visibility="public" xPosition="2850.0" yPosition="179.0">
       <Fields>
-        <Field name="RequestAccounts" type="RequestAccount[]" visibility="public" isStatic="true"/>
-        <Field name="Firstname" type="String" visibility="private"/>
-        <Field name="Lastname" type="String" visibility="private"/>
+        <Field name="accountRequests" type="AccountRequest[]" visibility="public" isStatic="true"/>
         <Field name="Password" type="String" visibility="private"/>
+        <Field name="Forename" type="String" visibility="private"/>
+        <Field name="Surname" type="String" visibility="private"/>
         <Field name="Address" type="String" visibility="private"/>
         <Field name="Gender" type="String" visibility="private"/>
-        <Field name="DoB" type="String" visibility="private"/>
+        <Field name="DOB" type="String" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="String" name="Gender"/>
-          <Argument type="String" name="DoB"/>
+          <Argument type="String" name="DOB"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="getFirstname" returnType="String" visibility="public"/>
-        <Method name="setFirstname" returnType="String" visibility="public">
-          <Argument type="String" name="Firstname"/>
-        </Method>
-        <Method name="getLastname" returnType="String" visibility="public"/>
-        <Method name="setLastname" returnType="String" visibility="public">
-          <Argument type="String" name="Lastname"/>
-        </Method>
         <Method name="getPassword" returnType="String" visibility="public"/>
-        <Method name="setPassword" returnType="String" visibility="public">
+        <Method name="setPassword" returnType="void" visibility="public">
           <Argument type="String" name="Password"/>
         </Method>
+        <Method name="getForename" returnType="String" visibility="public"/>
+        <Method name="setForename" returnType="void" visibility="public">
+          <Argument type="String" name="Forename"/>
+        </Method>
+        <Method name="getSurname" returnType="String" visibility="public"/>
+        <Method name="setSurname" returnType="void" visibility="public">
+          <Argument type="String" name="Surname"/>
+        </Method>
         <Method name="getAddress" returnType="String" visibility="public"/>
-        <Method name="setAddress" returnType="String" visibility="public">
+        <Method name="setAddress" returnType="void" visibility="public">
           <Argument type="String" name="Address"/>
         </Method>
         <Method name="getGender" returnType="String" visibility="public"/>
-        <Method name="setGender" returnType="String" visibility="public">
+        <Method name="setGender" returnType="void" visibility="public">
           <Argument type="String" name="Gender"/>
         </Method>
-        <Method name="getDoB" returnType="String" visibility="public"/>
-        <Method name="setDoB" returnType="String" visibility="public">
-          <Argument type="String" name="DoB"/>
+        <Method name="getDOB" returnType="String" visibility="public"/>
+        <Method name="setDOB" returnType="void" visibility="public">
+          <Argument type="String" name="DOB"/>
         </Method>
-        <Method name="addRequestAccount" returnType="RequestAccount" visibility="public">
-          <Argument type="RequestAccountt" name="newRequestAccount"/>
+        <Method name="addAccountRequest" returnType="void" visibility="public">
+          <Argument type="AccountRequest" name="newAccountRequest"/>
         </Method>
-        <Method name="removeRequestAccount" returnType="RequestAccount" visibility="public">
-          <Argument type="RequestAccount" name="removeRequestAccount"/>
+        <Method name="removeAccountRequest" returnType="void" visibility="public">
+          <Argument type="AccountRequest" name="removeAccountRequest"/>
         </Method>
-        <Method name="getRequestAccounts" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="saveRequestAccounts" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestAccounts" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getAccountRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveAccountRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setAccountRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Appointment" package="system" visibility="public" xPosition="1154.0" yPosition="861.0">
+    <Class name="Appointment" package="system" visibility="public" xPosition="261.0" yPosition="1780.0">
       <Fields>
         <Field name="appointments" type="Appointment[]" visibility="public" isStatic="true"/>
         <Field name="Doctor" type="Doctor" visibility="private"/>
@@ -74,21 +74,21 @@
       </Constructors>
       <Methods>
         <Method name="getDoctor" returnType="Doctor" visibility="public"/>
-        <Method name="setDoctor" returnType="Doctor" visibility="public">
+        <Method name="setDoctor" returnType="void" visibility="public">
           <Argument type="Doctor" name="Doctor"/>
         </Method>
         <Method name="getPatient" returnType="Patient" visibility="public"/>
-        <Method name="setPatient" returnType="Patient" visibility="public">
+        <Method name="setPatient" returnType="void" visibility="public">
           <Argument type="Patient" name="Patient"/>
         </Method>
         <Method name="getDate" returnType="String" visibility="public"/>
-        <Method name="setDate" returnType="String" visibility="public">
+        <Method name="setDate" returnType="void" visibility="public">
           <Argument type="String" name="Date"/>
         </Method>
-        <Method name="addAppointment" returnType="Appointment" visibility="public">
+        <Method name="addAppointment" returnType="void" visibility="public">
           <Argument type="Appointment" name="newAppointment"/>
         </Method>
-        <Method name="removeAppointment" returnType="Appointment" visibility="public">
+        <Method name="removeAppointment" returnType="void" visibility="public">
           <Argument type="Appointment" name="removeAppointment"/>
         </Method>
         <Method name="getAppointments" returnType="void" visibility="public" isStatic="true"/>
@@ -96,9 +96,9 @@
         <Method name="setAppointments" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="RequestAppointment" package="system" visibility="public" xPosition="1058.0" yPosition="1711.0">
+    <Class name="AppointmentRequest" package="system" visibility="public" xPosition="822.0" yPosition="1841.0">
       <Fields>
-        <Field name="appointmentRequests" type="RequestAppointment[]" visibility="public" isStatic="true"/>
+        <Field name="appointmentRequests" type="AppointmentRequest[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
@@ -108,45 +108,45 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="addRequestAppointment" returnType="RequestAppointment" visibility="public">
-          <Argument type="RequestAppointment" name="newRequestAppointment"/>
+        <Method name="addAppointmentRequest" returnType="void" visibility="public">
+          <Argument type="AppointmentRequest" name="newAppointmentRequest"/>
         </Method>
-        <Method name="removeRequestAppointment" returnType="RequestAppointment" visibility="public">
-          <Argument type="RequestAppointment" name="removeRequestAppointment"/>
+        <Method name="removeAppointmentRequest" returnType="void" visibility="public">
+          <Argument type="AppointmentRequest" name="removeAppointmentRequest"/>
         </Method>
-        <Method name="saveRequestAppointments" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="getRequestAppointments" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestAppointments" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveAppointmentRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getAppointmentRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setAppointmentRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Feedback" package="system" visibility="public" xPosition="406.0" yPosition="1584.0">
+    <Class name="Feedback" package="system" visibility="public" xPosition="2415.0" yPosition="717.0">
       <Fields>
         <Field name="feedback" type="Feedback[]" visibility="public" isStatic="true"/>
         <Field name="Doctor" type="Doctor" visibility="private"/>
-        <Field name="Rating" type="float" visibility="private"/>
+        <Field name="Rating" type="double" visibility="private"/>
         <Field name="Notes" type="String" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="Doctor" name="Doctor"/>
-          <Argument type="float" name="Rating"/>
+          <Argument type="double" name="Rating"/>
           <Argument type="String" name="Notes"/>
         </Constructor>
       </Constructors>
       <Methods>
         <Method name="getDoctor" returnType="Doctor" visibility="public"/>
-        <Method name="setDoctor" returnType="Doctor" visibility="public">
+        <Method name="setDoctor" returnType="void" visibility="public">
           <Argument type="Doctor" name="Doctor"/>
         </Method>
-        <Method name="getRating" returnType="float" visibility="public"/>
-        <Method name="setRating" returnType="float" visibility="public">
+        <Method name="getRating" returnType="double" visibility="public"/>
+        <Method name="setRating" returnType="void" visibility="public">
           <Argument type="double" name="Rating"/>
         </Method>
         <Method name="getNotes" returnType="String" visibility="public"/>
-        <Method name="setNotes" returnType="String" visibility="public">
+        <Method name="setNotes" returnType="void" visibility="public">
           <Argument type="String" name="Notes"/>
         </Method>
-        <Method name="addFeedback" returnType="Feedback" visibility="public">
+        <Method name="addFeedback" returnType="void" visibility="public">
           <Argument type="Feedback" name="newFeedback"/>
         </Method>
         <Method name="getFeedback" returnType="void" visibility="public" isStatic="true"/>
@@ -154,9 +154,9 @@
         <Method name="setFeedback" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="RequestFeedback" package="system" visibility="public" xPosition="260.0" yPosition="2020.0">
+    <Class name="FeedbackRequest" package="system" visibility="public" xPosition="1272.0" yPosition="609.0">
       <Fields>
-        <Field name="RequestFeedbacks" type="RequestFeedback[]" visibility="public" isStatic="true"/>
+        <Field name="feedbackRequests" type="FeedbackRequest[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
@@ -166,18 +166,18 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="addRequestFeedback" returnType="RequestFeedback" visibility="public">
-          <Argument type="RequestFeedback" name="newRequestFeedback"/>
+        <Method name="addFeedbackRequest" returnType="void" visibility="public">
+          <Argument type="FeedbackRequest" name="newFeedbackRequest"/>
         </Method>
-        <Method name="removeRequestFeedback" returnType="RequestFeedback" visibility="public">
-          <Argument type="RequestFeedback" name="removeRequestFeedback"/>
+        <Method name="removeFeedbackRequest" returnType="void" visibility="public">
+          <Argument type="FeedbackRequest" name="removeFeedbackRequest"/>
         </Method>
-        <Method name="saveRequestFeedbacks" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="getRequestFeedbacks" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestFeedbacks" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveFeedbackRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getFeedbackRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setFeedbackRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Medicine" package="system" visibility="public" xPosition="3201.0" yPosition="1176.0">
+    <Class name="Medicine" package="system" visibility="public" xPosition="2219.0" yPosition="1244.0">
       <Fields>
         <Field name="medicines" type="Medicine[]" visibility="public" isStatic="true"/>
         <Field name="Name" type="String" visibility="private"/>
@@ -191,14 +191,14 @@
       </Constructors>
       <Methods>
         <Method name="getName" returnType="String" visibility="public"/>
-        <Method name="setName" returnType="String" visibility="public">
+        <Method name="setName" returnType="void" visibility="public">
           <Argument type="String" name="Name"/>
         </Method>
         <Method name="getStock" returnType="int" visibility="public"/>
-        <Method name="setStock" returnType="int" visibility="public">
+        <Method name="setStock" returnType="void" visibility="public">
           <Argument type="int" name="Stock"/>
         </Method>
-        <Method name="addMedicine" returnType="Medicine" visibility="public">
+        <Method name="addMedicine" returnType="void" visibility="public">
           <Argument type="Medicine" name="newMedicine"/>
         </Method>
         <Method name="getMedicine" returnType="void" visibility="public" isStatic="true"/>
@@ -206,9 +206,9 @@
         <Method name="setMedicine" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="RequestMedicine" package="system" visibility="public" xPosition="3036.0" yPosition="1804.0">
+    <Class name="MedicineRequest" package="system" visibility="public" xPosition="2714.0" yPosition="1244.0">
       <Fields>
-        <Field name="RequestMedicines" type="RequestMedicine[]" visibility="public" isStatic="true"/>
+        <Field name="medicineRequests" type="MedicineRequest[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
@@ -217,18 +217,18 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="removeRequestMedicine" returnType="RequestMedicine" visibility="public">
-          <Argument type="RequestMedicine" name="removeRequestMedicine"/>
+        <Method name="removeMedicineRequest" returnType="void" visibility="public">
+          <Argument type="MedicineRequest" name="removeMedicineRequest"/>
         </Method>
-        <Method name="addRequestMedicine" returnType="RequestMedicine" visibility="public">
-          <Argument type="RequestMedicine" name="newMedicine"/>
+        <Method name="addMedicineRequest" returnType="void" visibility="public">
+          <Argument type="MedicineRequest" name="newMedicine"/>
         </Method>
-        <Method name="getRequestMedicines" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="saveRequestMedicines" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestMedicines" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getMedicineRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveMedicineRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setMedicineRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Notification" package="system" visibility="public" xPosition="1513.0" yPosition="131.0">
+    <Class name="Notification" package="system" visibility="public" xPosition="2047.0" yPosition="246.0">
       <Fields>
         <Field name="message" type="String" visibility="private"/>
       </Fields>
@@ -239,12 +239,12 @@
       </Constructors>
       <Methods>
         <Method name="getMessage" returnType="String" visibility="public"/>
-        <Method name="setMessage" returnType="String" visibility="public">
+        <Method name="setMessage" returnType="void" visibility="public">
           <Argument type="String" name="message"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="PastAppointment" package="system" visibility="public" xPosition="1603.0" yPosition="1114.0">
+    <Class name="PastAppointment" package="system" visibility="public" xPosition="1466.0" yPosition="2090.0">
       <Fields>
         <Field name="pastAppointments" type="PastAppointment[]" visibility="public" isStatic="true"/>
         <Field name="pastPrescription" type="Prescription" visibility="private"/>
@@ -259,10 +259,10 @@
       </Constructors>
       <Methods>
         <Method name="getPastPrescription" returnType="Prescription" visibility="public"/>
-        <Method name="setPastPrescription" returnType="Prescription" visibility="public">
+        <Method name="setPastPrescription" returnType="void" visibility="public">
           <Argument type="Prescription" name="pastPrescription"/>
         </Method>
-        <Method name="addPastAppointment" returnType="PastAppointment" visibility="public">
+        <Method name="addPastAppointment" returnType="void" visibility="public">
           <Argument type="PastAppointment" name="newPastAppointment"/>
         </Method>
         <Method name="getPastAppointments" returnType="void" visibility="public" isStatic="true"/>
@@ -270,7 +270,7 @@
         <Method name="setPastAppointments" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Prescription" package="system" visibility="public" xPosition="2481.0" yPosition="1114.0">
+    <Class name="Prescription" package="system" visibility="public" xPosition="1413.0" yPosition="1283.0">
       <Fields>
         <Field name="prescriptions" type="Prescription[]" visibility="public" isStatic="true"/>
         <Field name="Doctor" type="Doctor" visibility="private"/>
@@ -292,33 +292,33 @@
       </Constructors>
       <Methods>
         <Method name="getDoctor" returnType="Doctor" visibility="public"/>
-        <Method name="setDoctor" returnType="Doctor" visibility="public">
+        <Method name="setDoctor" returnType="void" visibility="public">
           <Argument type="Doctor" name="Doctor"/>
         </Method>
         <Method name="getPatient" returnType="Patient" visibility="public"/>
-        <Method name="setPatient" returnType="Patient" visibility="public">
+        <Method name="setPatient" returnType="void" visibility="public">
           <Argument type="Patient" name="Patient"/>
         </Method>
         <Method name="getNotes" returnType="String" visibility="public"/>
-        <Method name="setNotes" returnType="String" visibility="public">
+        <Method name="setNotes" returnType="void" visibility="public">
           <Argument type="String" name="Notes"/>
         </Method>
         <Method name="getMedicine" returnType="Medicine" visibility="public"/>
-        <Method name="setMedicine" returnType="Medicine" visibility="public">
+        <Method name="setMedicine" returnType="void" visibility="public">
           <Argument type="Medicine" name="Medicine"/>
         </Method>
         <Method name="getQuantity" returnType="int" visibility="public"/>
-        <Method name="setQuantity" returnType="int" visibility="public">
+        <Method name="setQuantity" returnType="void" visibility="public">
           <Argument type="int" name="Quantity"/>
         </Method>
         <Method name="getDosage" returnType="String" visibility="public"/>
-        <Method name="setDosage" returnType="String" visibility="public">
+        <Method name="setDosage" returnType="void" visibility="public">
           <Argument type="String" name="Dosage"/>
         </Method>
-        <Method name="removePrescription" returnType="Prescription" visibility="public">
+        <Method name="removePrescription" returnType="void" visibility="public">
           <Argument type="Prescription" name="removePrescription"/>
         </Method>
-        <Method name="addPrescription" returnType="Prescription" visibility="public">
+        <Method name="addPrescription" returnType="void" visibility="public">
           <Argument type="Prescription" name="newPrescription"/>
         </Method>
         <Method name="savePrescriptions" returnType="void" visibility="public" isStatic="true"/>
@@ -326,9 +326,9 @@
         <Method name="setPrescriptions" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="RequestPrescription" package="system" visibility="public" xPosition="2215.0" yPosition="2020.0">
+    <Class name="PrescriptionRequest" package="system" visibility="public" xPosition="2234.0" yPosition="2090.0">
       <Fields>
-        <Field name="RequestPrescriptions" type="RequestPrescription[]" visibility="public" isStatic="true"/>
+        <Field name="prescriptionRequests" type="PrescriptionRequest[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
@@ -341,20 +341,20 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="removeRequestPrescription" returnType="RequestPrescription" visibility="public">
-          <Argument type="RequestPrescription" name="removeRequestPrescription"/>
+        <Method name="removePrescriptionRequest" returnType="void" visibility="public">
+          <Argument type="PrescriptionRequest" name="removePrescriptionRequest"/>
         </Method>
-        <Method name="addRequestPrescription" returnType="RequestPrescription" visibility="public">
-          <Argument type="RequestPrescription" name="newRequestPrescription"/>
+        <Method name="addPrescriptionRequest" returnType="void" visibility="public">
+          <Argument type="PrescriptionRequest" name="newPrescriptionRequest"/>
         </Method>
-        <Method name="getRequestPrescriptions" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="saveRequestPrescriptions" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestPrescriptions" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getPrescriptionRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="savePrescriptionRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setPrescriptionRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="RequestTermination" package="system" visibility="public" xPosition="2192.0" yPosition="576.0">
+    <Class name="TerminationRequest" package="system" visibility="public" xPosition="603.0" yPosition="825.0">
       <Fields>
-        <Field name="RequestTerminations" type="RequestTermination[]" visibility="public" isStatic="true"/>
+        <Field name="terminationRequests" type="TerminationRequest[]" visibility="public" isStatic="true"/>
         <Field name="Patient" type="Patient" visibility="private"/>
       </Fields>
       <Constructors>
@@ -364,165 +364,165 @@
       </Constructors>
       <Methods>
         <Method name="getPatient" returnType="Patient" visibility="public"/>
-        <Method name="setPatientID" returnType="Patient" visibility="public">
+        <Method name="setPatientID" returnType="void" visibility="public">
           <Argument type="Patient" name="Patient"/>
         </Method>
-        <Method name="removeRequestTermination" returnType="RequestTermination" visibility="public">
-          <Argument type="RequestTermination" name="removeRequestTermination"/>
+        <Method name="removeTerminationRequest" returnType="void" visibility="public">
+          <Argument type="TerminationRequest" name="removeTerminationRequest"/>
         </Method>
-        <Method name="addRequestTermination" returnType="RequestTermination" visibility="public">
-          <Argument type="RequestTermination" name="newRequestTermination"/>
+        <Method name="addTerminationRequest" returnType="void" visibility="public">
+          <Argument type="TerminationRequest" name="newTerminationRequest"/>
         </Method>
-        <Method name="getRequestTerminations" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="saveRequestTerminations" returnType="void" visibility="public" isStatic="true"/>
-        <Method name="setRequestTerminations" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getTerminationRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveTerminationRequests" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="setTerminationRequests" returnType="void" visibility="public" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Admin" package="users" visibility="public" xPosition="772.0" yPosition="19.0">
+    <Class name="Admin" package="users" visibility="public" xPosition="1303.0" yPosition="84.0">
       <Fields>
         <Field name="admins" type="Admin[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="String" name="ID"/>
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="Notification" name="Message"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="addAdmin" returnType="Admin" visibility="public">
+        <Method name="addAdmin" returnType="void" visibility="public">
           <Argument type="Admin" name="newAdmin"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Doctor" package="users" visibility="public" xPosition="260.0" yPosition="1300.0">
+    <Class name="Doctor" package="users" visibility="public" xPosition="1212.0" yPosition="931.0">
       <Fields>
         <Field name="doctors" type="Doctor[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="String" name="ID"/>
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="Notification" name="Message"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="addDoctor" returnType="Doctor" visibility="public">
+        <Method name="addDoctor" returnType="void" visibility="public">
           <Argument type="Doctor" name="newDoctor"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Patient" package="users" visibility="public" xPosition="1041.0" yPosition="455.0">
+    <Class name="Patient" package="users" visibility="public" xPosition="165.0" yPosition="1167.0">
       <Fields>
         <Field name="patients" type="Patient[]" visibility="public" isStatic="true"/>
         <Field name="Gender" type="String" visibility="private"/>
-        <Field name="DoB" type="String" visibility="private"/>
+        <Field name="DOB" type="String" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="String" name="ID"/>
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="Notification" name="Message"/>
           <Argument type="String" name="Gender"/>
-          <Argument type="String" name="DoB"/>
+          <Argument type="String" name="DOB"/>
         </Constructor>
       </Constructors>
       <Methods>
         <Method name="getGender" returnType="String" visibility="public"/>
-        <Method name="setGender" returnType="String" visibility="public">
+        <Method name="setGender" returnType="void" visibility="public">
           <Argument type="String" name="Gender"/>
         </Method>
-        <Method name="getDoB" returnType="String" visibility="public"/>
-        <Method name="setDoB" returnType="String" visibility="public">
-          <Argument type="String" name="DoB"/>
+        <Method name="getDOB" returnType="String" visibility="public"/>
+        <Method name="setDOB" returnType="void" visibility="public">
+          <Argument type="String" name="DOB"/>
         </Method>
-        <Method name="removePatient" returnType="Patient" visibility="public">
+        <Method name="removePatient" returnType="void" visibility="public">
           <Argument type="Patient" name="removePatient"/>
         </Method>
-        <Method name="addPatient" returnType="Patient" visibility="public">
+        <Method name="addPatient" returnType="void" visibility="public">
           <Argument type="Patient" name="newPatient"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Secretary" package="users" visibility="public" xPosition="1846.0" yPosition="228.0">
+    <Class name="Secretary" package="users" visibility="public" xPosition="2066.0" yPosition="439.0">
       <Fields>
         <Field name="secretarys" type="Secretary[]" visibility="public" isStatic="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="String" name="ID"/>
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="Notification" name="Message"/>
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="addSecretary" returnType="Secretary" visibility="public">
+        <Method name="addSecretary" returnType="void" visibility="public">
           <Argument type="Secretary" name="newSecretary"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="User" package="users" visibility="public" xPosition="67.0" yPosition="93.0">
+    <Class name="User" package="users" visibility="public" xPosition="79.0" yPosition="84.0">
       <Fields>
         <Field name="users" type="User[]" visibility="public" isStatic="true"/>
         <Field name="loggedUser" type="User" visibility="public" isStatic="true"/>
         <Field name="ID" type="String" visibility="private"/>
-        <Field name="Firstname" type="String" visibility="private"/>
-        <Field name="Lastname" type="String" visibility="private"/>
         <Field name="Password" type="String" visibility="private"/>
+        <Field name="Forename" type="String" visibility="private"/>
+        <Field name="Surname" type="String" visibility="private"/>
         <Field name="Address" type="String" visibility="private"/>
         <Field name="Notification" type="Notification" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
           <Argument type="String" name="ID"/>
-          <Argument type="String" name="Firstname"/>
-          <Argument type="String" name="Lastname"/>
           <Argument type="String" name="Password"/>
+          <Argument type="String" name="Forename"/>
+          <Argument type="String" name="Surname"/>
           <Argument type="String" name="Address"/>
           <Argument type="Notification" name="Notification"/>
         </Constructor>
       </Constructors>
       <Methods>
         <Method name="getID" returnType="String" visibility="public"/>
-        <Method name="setID" returnType="String" visibility="public">
+        <Method name="setID" returnType="void" visibility="public">
           <Argument type="String" name="ID"/>
         </Method>
-        <Method name="getFirstname" returnType="String" visibility="public"/>
-        <Method name="setFirstname" returnType="String" visibility="public">
-          <Argument type="String" name="Firstname"/>
-        </Method>
-        <Method name="getLastname" returnType="String" visibility="public"/>
-        <Method name="setLastname" returnType="String" visibility="public">
-          <Argument type="String" name="Lastname"/>
-        </Method>
-        <Method name="setPassword" returnType="String" visibility="public"/>
-        <Method name="setPassword" returnType="String" visibility="public">
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
           <Argument type="String" name="Password"/>
         </Method>
+        <Method name="getForename" returnType="String" visibility="public"/>
+        <Method name="setForename" returnType="void" visibility="public">
+          <Argument type="String" name="Forename"/>
+        </Method>
+        <Method name="getSurname" returnType="String" visibility="public"/>
+        <Method name="setSurname" returnType="void" visibility="public">
+          <Argument type="String" name="Surname"/>
+        </Method>
         <Method name="getAddress" returnType="String" visibility="public"/>
-        <Method name="setAddress" returnType="String" visibility="public">
+        <Method name="setAddress" returnType="void" visibility="public">
           <Argument type="String" name="Address"/>
         </Method>
         <Method name="getNotification" returnType="Notification" visibility="public"/>
-        <Method name="setNotification" returnType="Notification" visibility="public">
+        <Method name="setNotification" returnType="void" visibility="public">
           <Argument type="Notification" name="Notification"/>
         </Method>
-        <Method name="removeUser" returnType="User" visibility="public">
+        <Method name="removeUser" returnType="void" visibility="public">
           <Argument type="User" name="removeUser"/>
         </Method>
-        <Method name="addUser" returnType="User" visibility="public">
+        <Method name="addUser" returnType="void" visibility="public">
           <Argument type="User" name="newUser"/>
         </Method>
         <Method name="saveUsers" returnType="void" visibility="public" isStatic="true"/>
@@ -534,49 +534,49 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="system.RequestTermination" target="system.RequestTermination" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.RequestAccount" target="system.RequestAccount" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Doctor" source="system.Feedback" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestPrescription" target="system.RequestPrescription" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestAppointment" target="system.RequestAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.PastAppointment" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="loggedUser" source="users.User" target="users.User" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Appointment" target="system.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="users.Secretary" target="users.Secretary" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="users.Doctor" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Patient" source="system.Prescription" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestPrescription" target="system.Prescription"/>
-    <IsRelation name="is" source="users.Admin" target="users.User"/>
-    <IsRelation name="is" source="system.PastAppointment" target="system.Appointment"/>
-    <HasRelation name="pastPrescription" source="system.PastAppointment" target="system.Prescription" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Patient" source="system.Appointment" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Appointment" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.Medicine" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.RequestMedicine" target="system.RequestMedicine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.PastAppointment" target="system.PastAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestAppointment" target="system.Appointment"/>
-    <UseRelation source="system.RequestTermination" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestFeedback" target="system.Feedback"/>
-    <UseRelation name="" source="users.User" target="users.User" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="system.RequestMedicine" target="system.Medicine"/>
-    <HasRelation name="Patient" source="system.RequestTermination" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Doctor" source="system.Appointment" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Prescription" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.RequestFeedback" target="system.RequestFeedback" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Prescription" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="users.Patient" target="users.User"/>
-    <HasRelation name="Medicine" source="system.Prescription" target="system.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="users.Patient" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Notification" source="users.User" target="system.Notification" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Feedback" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="users.Admin" target="users.Admin" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="users.Doctor" target="users.User"/>
-    <IsRelation name="is" source="users.Secretary" target="users.User"/>
-    <UseRelation source="system.Prescription" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="system.Prescription" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="users.User" target="system.Notification" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Patient" source="system.TerminationRequest" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Appointment" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.PrescriptionRequest" target="system.PrescriptionRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Patient" source="system.Prescription" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="Doctor" source="system.Prescription" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="system.Feedback" target="system.Feedback" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.PastAppointment" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.Secretary" target="users.Secretary" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Appointment" target="system.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.Prescription" target="system.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="users.Secretary" target="users.User"/>
+    <IsRelation name="is" source="system.AppointmentRequest" target="system.Appointment"/>
+    <IsRelation name="is" source="system.FeedbackRequest" target="system.Feedback"/>
+    <HasRelation name="loggedUser" source="users.User" target="users.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.MedicineRequest" target="system.MedicineRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pastPrescription" source="system.PastAppointment" target="system.Prescription" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="system.PastAppointment" target="system.Appointment"/>
+    <IsRelation name="is" source="system.PrescriptionRequest" target="system.Prescription"/>
+    <IsRelation name="is" source="system.MedicineRequest" target="system.Medicine"/>
+    <UseRelation source="system.Feedback" target="system.Feedback" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.AppointmentRequest" target="system.AppointmentRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.AccountRequest" target="system.AccountRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Patient" source="system.Appointment" target="users.Patient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Doctor" source="system.Appointment" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Prescription" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Medicine" source="system.Prescription" target="system.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="users.Doctor" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Prescription" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.TerminationRequest" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.FeedbackRequest" target="system.FeedbackRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="users.Doctor" target="users.User"/>
+    <UseRelation source="users.User" target="users.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="users.Admin" target="users.User"/>
+    <HasRelation name="Notification" source="users.User" target="system.Notification" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.TerminationRequest" target="system.TerminationRequest" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.User" target="system.Notification" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Prescription" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="users.Patient" target="users.Patient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.Feedback" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="system.Medicine" target="system.Medicine" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="system.Appointment" target="users.Doctor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Doctor" source="system.Feedback" target="users.Doctor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="system.PastAppointment" target="system.PastAppointment" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

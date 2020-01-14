@@ -1,12 +1,11 @@
+
 package system;
 
 import java.io.*;
 import users.*;
 
-public class Prescription implements Serializable {
-
+public class Prescription implements Serializable{
     public static Prescription[] prescriptions;
-
     private Doctor Doctor;
     private Patient Patient;
     private String Notes;
@@ -70,7 +69,7 @@ public class Prescription implements Serializable {
     public void setDosage(String Dosage) {
         this.Dosage = Dosage;
     }
-
+    
     public void removePrescription(Prescription removePrescription) {
         int i = 0;
         
@@ -88,15 +87,14 @@ public class Prescription implements Serializable {
         savePrescriptions();
         getPrescriptions();
     }
-
+    
     public void addPrescription(Prescription newPrescription) {
         int i;
         
         Prescription[] store = new Prescription[prescriptions.length + 1];
         
-        for(i = 0;i < store.length - 1; i++) {
+        for(i=0;i<store.length-1;i++)
             store[i] = prescriptions[i];
-        }
         
         store[i] = newPrescription;
         prescriptions = store;
@@ -104,11 +102,11 @@ public class Prescription implements Serializable {
         savePrescriptions();
         getPrescriptions();
     }
-
+    
     public static void savePrescriptions() {
-        String filename = "data/prescriptions.ser"; 
-           
-        try {    
+        String filename = "info/prescriptions.ser"; 
+          
+        try {  
             FileOutputStream file = new FileOutputStream(filename); 
             ObjectOutputStream out = new ObjectOutputStream(file); 
               
@@ -118,13 +116,13 @@ public class Prescription implements Serializable {
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("Error: " +  ex); 
+            System.out.println("Error is caught: " +  ex); 
         } 
     }
-
+    
     public static void getPrescriptions() {
         Prescription[] store = null;
-        String filename = "files/prescriptions.ser";
+        String filename = "info/prescriptions.ser";
         
         try {    
             FileInputStream file = new FileInputStream(filename); 
@@ -136,29 +134,33 @@ public class Prescription implements Serializable {
             file.close(); 
         } 
         catch(IOException ex) { 
-            System.out.println("Error: " + ex); 
+            System.out.println("IOException is caught: " + ex); 
         } 
         catch(ClassNotFoundException ex) { 
-            System.out.println("ClassNotFoundException"); 
+            System.out.println("ClassNotFoundException is caught"); 
         } 
         
         prescriptions = store;
     }
-
-    public static void setPrescriptions(){
+    
+    public static void setPrescriptions() {
         Prescription[] store = {
             new Prescription(
-                new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
-                new Patient("P001","Sam","Jordan","password","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
-                "Better, Less Needed", new Medicine("Amoxicillin", 5), 2, "1 EVERY 24 HOURS"),
+                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
+                new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000"),
+                "Showing signs of health improving.\nOn course for a full recovery.", new Medicine("Chlorpromazine", 5), 4, "1 EVERY 24 HOURS"),
             new Prescription(
-                new Doctor("D003","Fraser","Mcdodal","password","94 Dalphos,\nBristol,\nBR73RD",null),
-                new Patient("P001","Sam","Jordan","password","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
-                "Worse, More Needed", new Medicine("Propranalol", 30), 5, "1 EVERY 48 HOURS"),
+                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
+                new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", "Chloe", "Jones", "31 Clarence Place,\nPlymouth,\nPL2 3JP", null, "F", "13/06/1998"),
+                "Signs of decreasing health.\nRecommend dosage increase.", new Medicine("Tamoxifen", 3), 9, "1 A DAY"),
             new Prescription(
-                new Doctor("D002","Stanley","Doorsworth","password","7 Cottages,\n London,\nLN47TS",null),
-                new Patient("P003","Imogen","Jones","password","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999"),
-                "Worse, More Needed", new Medicine("Nifedipine", 25), 1, "4 EVERY 12 HOURS")
+                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null), 
+                new Patient("P002", "5f4dcc3b5aa765d61d8327deb882cf99", "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992"),
+                "Needs more Medicine.", new Medicine("Beta Blocker", 15), 19, "4 EVERY 12 HOURS"),
+            new Prescription(
+                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null), 
+                new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000"),
+                "Health is looking good.\nRecommend dosage decrease", new Medicine("Immunosuppressants", 15), 19, "1 EVERY 24 HOURS")
         };
         
         prescriptions = store;
