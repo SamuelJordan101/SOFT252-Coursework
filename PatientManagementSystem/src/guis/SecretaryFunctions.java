@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package guis;
 import javax.swing.table.DefaultTableModel;
 import system.*;
@@ -10,15 +6,10 @@ import users.*;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author LoL-1
- */
+
 public class SecretaryFunctions extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SecretaryMenu
-     */
+
     public SecretaryFunctions() {
         initComponents();
         getUserInfo();
