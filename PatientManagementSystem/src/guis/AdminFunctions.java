@@ -147,12 +147,9 @@ public class AdminFunctions extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         txtFeedback = new javax.swing.JTextArea();
         tabAddFeedback = new javax.swing.JPanel();
-        jPanel28 = new javax.swing.JPanel();
         lblAddDoctorFeedback = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblNewFeedback = new javax.swing.JTable();
-        lblNewFeedback = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
         lblDoctor = new javax.swing.JLabel();
         txtDoctor = new javax.swing.JTextField();
         lblRating = new javax.swing.JLabel();
@@ -179,26 +176,26 @@ public class AdminFunctions extends javax.swing.JFrame {
         lblAccountType1.setText("Account Type:");
 
         txtUserAccountType.setEditable(false);
-        txtUserAccountType.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserAccountType.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserID1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserID1.setText("User ID:");
 
         txtUserID.setEditable(false);
-        txtUserID.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserName1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserName1.setText("User Name:");
 
         txtUserName.setEditable(false);
-        txtUserName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserName2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserName2.setText("Address:");
 
         txtUserAddress.setEditable(false);
         txtUserAddress.setColumns(20);
-        txtUserAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtUserAddress.setRows(5);
         jScrollPane8.setViewportView(txtUserAddress);
 
@@ -251,7 +248,7 @@ public class AdminFunctions extends javax.swing.JFrame {
                 .addGroup(tabUserInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUserName2)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(384, Short.MAX_VALUE))
+                .addContainerGap(416, Short.MAX_VALUE))
         );
 
         menuAdmin.addTab("Account Details", tabUserInfo);
@@ -270,18 +267,18 @@ public class AdminFunctions extends javax.swing.JFrame {
         lblNewForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewForename.setText("Name:");
 
-        txtNewForename.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblNewSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewSurname.setText("Surname:");
 
-        txtNewSurname.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblNewAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewAddress.setText("Address:");
 
         txtNewAddress.setColumns(20);
-        txtNewAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNewAddress.setRows(5);
         jScrollPane1.setViewportView(txtNewAddress);
 
@@ -336,7 +333,7 @@ public class AdminFunctions extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAddAdmin)
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addContainerGap(356, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout tabCreateAdminAccountLayout = new javax.swing.GroupLayout(tabCreateAdminAccount);
@@ -375,18 +372,18 @@ public class AdminFunctions extends javax.swing.JFrame {
         lblNewUserForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewUserForename.setText("Forename:");
 
-        txtNewUserForename.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewUserForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblNewUserSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewUserSurname.setText("Surname:");
 
-        txtNewUserSurname.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewUserSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblNewUserAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewUserAddress.setText("Address:");
 
         txtNewUserAddress.setColumns(20);
-        txtNewUserAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewUserAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNewUserAddress.setRows(5);
         jScrollPane2.setViewportView(txtNewUserAddress);
 
@@ -452,7 +449,7 @@ public class AdminFunctions extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAddAccount)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(363, Short.MAX_VALUE))
         );
 
         menuAdmin.addTab("Add Doctors/Secretarys", tabAddDoctors_Secretarys);
@@ -471,7 +468,7 @@ public class AdminFunctions extends javax.swing.JFrame {
             }
         });
 
-        tblDoctorFeedback.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        tblDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblDoctorFeedback.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -510,19 +507,19 @@ public class AdminFunctions extends javax.swing.JFrame {
         lblDoctorName.setText("Doctor:");
 
         txtDoctorName.setEditable(false);
-        txtDoctorName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctorName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblOverallRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblOverallRating.setText("Overall Rating");
 
         txtDoctorRating.setEditable(false);
-        txtDoctorRating.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctorRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblFeedback.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblFeedback.setText("Feedback:");
 
         txtFeedback.setColumns(20);
-        txtFeedback.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtFeedback.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtFeedback.setLineWrap(true);
         txtFeedback.setRows(5);
         jScrollPane5.setViewportView(txtFeedback);
@@ -584,12 +581,10 @@ public class AdminFunctions extends javax.swing.JFrame {
 
         menuAdmin.addTab("Doctor Ratings/Feedback", tabDoctorsRatings);
 
-        jPanel28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblAddDoctorFeedback.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lblAddDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblAddDoctorFeedback.setText("Add Doctor Feedback");
 
-        tblNewFeedback.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        tblNewFeedback.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblNewFeedback.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -624,34 +619,29 @@ public class AdminFunctions extends javax.swing.JFrame {
             tblNewFeedback.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
-        lblNewFeedback.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        lblNewFeedback.setText("New Feedback:");
-
-        jPanel25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblDoctor.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        lblDoctor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblDoctor.setText("Doctor:");
 
         txtDoctor.setEditable(false);
-        txtDoctor.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        lblRating.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        lblRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblRating.setText("Rating:");
 
         txtRating.setEditable(false);
-        txtRating.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        lblPastNote.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        lblPastNote.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblPastNote.setText("Note:");
 
         txtFeedbackNote.setEditable(false);
         txtFeedbackNote.setColumns(20);
-        txtFeedbackNote.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtFeedbackNote.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtFeedbackNote.setLineWrap(true);
         txtFeedbackNote.setRows(5);
         jScrollPane6.setViewportView(txtFeedbackNote);
 
-        btnApprove.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        btnApprove.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnApprove.setText("Approve");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -659,108 +649,56 @@ public class AdminFunctions extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel25Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblPastNote)
-                        .addGap(12, 12, 12))
-                    .addGroup(jPanel25Layout.createSequentialGroup()
-                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel25Layout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(btnApprove))
-                            .addGroup(jPanel25Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel25Layout.createSequentialGroup()
-                                        .addComponent(lblRating)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(txtRating, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel25Layout.createSequentialGroup()
-                                        .addComponent(lblDoctor)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)))
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel25Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel25Layout.createSequentialGroup()
-                        .addComponent(lblPastNote)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDoctor))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRating)
-                            .addComponent(txtRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnApprove))
-                    .addComponent(jScrollPane6))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel28Layout.createSequentialGroup()
-                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel28Layout.createSequentialGroup()
-                                .addGap(407, 407, 407)
-                                .addComponent(lblAddDoctorFeedback))
-                            .addGroup(jPanel28Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblNewFeedback)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel28Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane4)
-                            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblAddDoctorFeedback)
-                .addGap(3, 3, 3)
-                .addComponent(lblNewFeedback)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout tabAddFeedbackLayout = new javax.swing.GroupLayout(tabAddFeedback);
         tabAddFeedback.setLayout(tabAddFeedbackLayout);
         tabAddFeedbackLayout.setHorizontalGroup(
             tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabAddFeedbackLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tabAddFeedbackLayout.createSequentialGroup()
+                        .addComponent(lblPastNote)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6))
+                    .addGroup(tabAddFeedbackLayout.createSequentialGroup()
+                        .addComponent(lblRating)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtRating))
+                    .addGroup(tabAddFeedbackLayout.createSequentialGroup()
+                        .addComponent(lblDoctor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDoctor))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1018, Short.MAX_VALUE)
+                    .addGroup(tabAddFeedbackLayout.createSequentialGroup()
+                        .addComponent(lblAddDoctorFeedback)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabAddFeedbackLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnApprove)))
                 .addContainerGap())
         );
         tabAddFeedbackLayout.setVerticalGroup(
             tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabAddFeedbackLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(lblAddDoctorFeedback)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDoctor)
+                    .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRating)
+                    .addComponent(txtRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tabAddFeedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPastNote)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnApprove)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         menuAdmin.addTab("Add Feedback", tabAddFeedback);
@@ -1062,8 +1000,6 @@ public class AdminFunctions extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbAccountType;
     private javax.swing.JComboBox<String> cmbSelectDoctor;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel28;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1079,7 +1015,6 @@ public class AdminFunctions extends javax.swing.JFrame {
     private javax.swing.JLabel lblFeedback;
     private java.awt.Label lblMain;
     private javax.swing.JLabel lblNewAddress;
-    private javax.swing.JLabel lblNewFeedback;
     private javax.swing.JLabel lblNewForename;
     private javax.swing.JLabel lblNewSurname;
     private javax.swing.JLabel lblNewUserAddress;

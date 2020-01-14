@@ -183,12 +183,12 @@ public class Login extends javax.swing.JFrame {
         lblUserID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserID.setText("User ID");
 
-        txtUserID.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblPassword.setText("Password");
 
-        txtPassword.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLogin.setText("Login");
@@ -239,18 +239,18 @@ public class Login extends javax.swing.JFrame {
         lblForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblForename.setText("Forename");
 
-        txtForename.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtForename.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblSurname.setText("Surname");
 
-        txtSurname.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtSurname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblAddress.setText("Address");
 
         txtAddress.setColumns(20);
-        txtAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtAddress.setLineWrap(true);
         txtAddress.setRows(5);
         jScrollPane1.setViewportView(txtAddress);
@@ -258,9 +258,9 @@ public class Login extends javax.swing.JFrame {
         lblGender.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblGender.setText("Gender");
 
-        txtGender.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        txtDOB.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDOB.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         btnSubmit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnSubmit.setText("Request Account");
@@ -281,7 +281,7 @@ public class Login extends javax.swing.JFrame {
         lblNewPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblNewPassword.setText("Password");
 
-        txtNewPassword.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtNewPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("<html>DOB<br>(dd/mm/yyyy) </html>");

@@ -317,26 +317,26 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblAccountType1.setText("Account Type:");
 
         txtUserAccountType.setEditable(false);
-        txtUserAccountType.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserAccountType.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserID1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserID1.setText("User ID:");
 
         txtUserID.setEditable(false);
-        txtUserID.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserName1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserName1.setText("User Name:");
 
         txtUserName.setEditable(false);
-        txtUserName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserName2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserName2.setText("Address:");
 
         txtUserAddress.setEditable(false);
         txtUserAddress.setColumns(20);
-        txtUserAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtUserAddress.setRows(5);
         jScrollPane8.setViewportView(txtUserAddress);
 
@@ -344,13 +344,13 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblUserAge1.setText("DOB:");
 
         txtUserAge.setEditable(false);
-        txtUserAge.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserAge.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblUserGender1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblUserGender1.setText("User Gender:");
 
         txtUserGender.setEditable(false);
-        txtUserGender.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtUserGender.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout tabUserInfoLayout = new javax.swing.GroupLayout(tabUserInfo);
         tabUserInfo.setLayout(tabUserInfoLayout);
@@ -441,7 +441,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblSelectDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblSelectDate.setText("Enter Date:");
 
-        txtEnterDate.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtEnterDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtEnterDate.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtEnterDateKeyReleased(evt);
@@ -451,7 +451,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblSelectTime.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblSelectTime.setText("Enter Time:");
 
-        txtEnterTime.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtEnterTime.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtEnterTime.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtEnterTimeKeyReleased(evt);
@@ -465,7 +465,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblDoctor.setText("Doctor:");
 
         txtDoctor.setEditable(false);
-        txtDoctor.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoctorActionPerformed(evt);
@@ -476,7 +476,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblDate.setText("Date:");
 
         txtDate.setEditable(false);
-        txtDate.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDateActionPerformed(evt);
@@ -487,7 +487,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblTime.setText("Time:");
 
         txtTime.setEditable(false);
-        txtTime.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtTime.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtTime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTimeActionPerformed(evt);
@@ -576,7 +576,7 @@ public class PatientFunctions extends javax.swing.JFrame {
                     .addComponent(txtTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnConfirm)
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(325, Short.MAX_VALUE))
         );
 
         menuPatient.addTab("Request Appointment", tabRequestAccount);
@@ -653,14 +653,14 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblPatientName.setText("Name:");
 
         txtPatientName.setEditable(false);
-        txtPatientName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPatientName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblPatientAddr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblPatientAddr.setText("Address:");
 
         txtPatientAddress.setEditable(false);
         txtPatientAddress.setColumns(5);
-        txtPatientAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPatientAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtPatientAddress.setRows(5);
         txtPatientAddress.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtPatientAddress);
@@ -669,13 +669,13 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblSex.setText("Gender:");
 
         txtPatientGender.setEditable(false);
-        txtPatientGender.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPatientGender.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblDOB.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblDOB.setText("Age:");
 
         txtPatientDOB.setEditable(false);
-        txtPatientDOB.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPatientDOB.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblDoctorInfo.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         lblDoctorInfo.setText("Prescription Info");
@@ -684,26 +684,26 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblDoctorName.setText("Name:");
 
         txtDoctorName.setEditable(false);
-        txtDoctorName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctorName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblDoctorAddr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblDoctorAddr.setText("Address:");
 
         txtDoctorAddress.setEditable(false);
         txtDoctorAddress.setColumns(5);
-        txtDoctorAddress.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtDoctorAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtDoctorAddress.setRows(5);
         txtDoctorAddress.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtDoctorAddress);
 
         txtPrescriptionNotes.setEditable(false);
         txtPrescriptionNotes.setColumns(5);
-        txtPrescriptionNotes.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPrescriptionNotes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtPrescriptionNotes.setRows(5);
         txtPrescriptionNotes.setWrapStyleWord(true);
         jScrollPane3.setViewportView(txtPrescriptionNotes);
 
-        tblMedicine.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        tblMedicine.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblMedicine.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -825,7 +825,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblViewPrescription1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblViewPrescription1.setText("View Appointment History");
 
-        tblPastAppointments.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        tblPastAppointments.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblPastAppointments.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -865,20 +865,20 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblPastDoctorName.setText("Doctor:");
 
         txtPastDoctor.setEditable(false);
-        txtPastDoctor.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPastDoctor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblPastDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblPastDate.setText("Date:");
 
         txtPastDate.setEditable(false);
-        txtPastDate.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPastDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblPastNote.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblPastNote.setText("Note:");
 
         txtPastNote.setEditable(false);
         txtPastNote.setColumns(20);
-        txtPastNote.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtPastNote.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtPastNote.setLineWrap(true);
         txtPastNote.setRows(5);
         jScrollPane6.setViewportView(txtPastNote);
@@ -927,7 +927,7 @@ public class PatientFunctions extends javax.swing.JFrame {
                 .addGroup(tabViewHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPastNote)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         menuPatient.addTab("View Appointment History", tabViewHistory);
@@ -950,7 +950,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblRateDoctorName.setText("Name:");
 
         txtRateDoctorName.setEditable(false);
-        txtRateDoctorName.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtRateDoctorName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtRateDoctorName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRateDoctorNameActionPerformed(evt);
@@ -961,7 +961,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         lblOverallRating.setText("Overall Rating:");
 
         txtOverallRating.setEditable(false);
-        txtOverallRating.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtOverallRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtOverallRating.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtOverallRatingActionPerformed(evt);
@@ -1084,7 +1084,7 @@ public class PatientFunctions extends javax.swing.JFrame {
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnConfirmFeedback)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         menuPatient.addTab("Doctor Feedback", tabDoctorFeedback);
@@ -1105,13 +1105,13 @@ public class PatientFunctions extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("User ID:");
 
-        txtTerminationID.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtTerminationID.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtTerminationID.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Password:");
 
-        txtTerminationPassword.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        txtTerminationPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1151,7 +1151,7 @@ public class PatientFunctions extends javax.swing.JFrame {
                     .addComponent(txtTerminationPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnTerminate)
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(449, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout tabRequestTerminationLayout = new javax.swing.GroupLayout(tabRequestTermination);
