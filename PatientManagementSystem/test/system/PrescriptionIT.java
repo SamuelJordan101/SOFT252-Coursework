@@ -250,8 +250,6 @@ public class PrescriptionIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

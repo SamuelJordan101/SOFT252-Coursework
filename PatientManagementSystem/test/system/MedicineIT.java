@@ -128,8 +128,6 @@ public class MedicineIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

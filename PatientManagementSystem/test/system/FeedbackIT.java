@@ -140,7 +140,6 @@ public class FeedbackIT {
         } else {
             error = false;
         }
-        
         assertEquals(false, error);
     }
 
@@ -156,8 +155,6 @@ public class FeedbackIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
-    }
-    
+    } 
 }

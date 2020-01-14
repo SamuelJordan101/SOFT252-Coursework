@@ -108,8 +108,6 @@ public class PrescriptionRequestIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

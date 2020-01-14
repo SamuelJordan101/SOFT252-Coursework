@@ -18,5 +18,4 @@ public class SystemITSuite {
     @AfterClass
     public static void tearDownClass() throws Exception {
     }
-    
 }

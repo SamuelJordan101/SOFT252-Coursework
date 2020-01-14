@@ -88,8 +88,7 @@ public class AppointmentRequestIT {
         } else {
             error = true;
         }
-        
-        assertEquals(false, error);
+               assertEquals(false, error);
     }
 
     @Test
@@ -104,8 +103,6 @@ public class AppointmentRequestIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

@@ -120,5 +120,4 @@ public class PastAppointmentIT {
         
         assertEquals(false, error);
     }
-    
 }

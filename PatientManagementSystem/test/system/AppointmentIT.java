@@ -174,7 +174,6 @@ public class AppointmentIT {
         {
             error = false;
         }
-        
         assertEquals(false, error);
     }
 
@@ -190,8 +189,6 @@ public class AppointmentIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

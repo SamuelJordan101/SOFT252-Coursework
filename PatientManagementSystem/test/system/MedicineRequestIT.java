@@ -52,7 +52,6 @@ public class MedicineRequestIT {
         MedicineRequest instance = MedicineRequest.medicineRequests[MedicineRequest.medicineRequests.length - 1];
         
         assertEquals(newMedicine.getName(), instance.getName());
-       
     }
 
     @Test

@@ -240,8 +240,6 @@ public class AccountRequestIT {
         } else {
             error = true;
         }
-        
         assertEquals(false, error);
     }
-    
 }

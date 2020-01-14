@@ -129,5 +129,4 @@ public class TerminationRequestIT {
         
         assertEquals(false, error);
     }
-    
 }
