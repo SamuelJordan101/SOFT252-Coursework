@@ -34,7 +34,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         
         if(notification != null)
         {
-            JOptionPane.showMessageDialog(this, notification.getMessage(), "WELCOME", 
+            JOptionPane.showMessageDialog(this, notification.getMessage(), "Welcome", 
                     JOptionPane.INFORMATION_MESSAGE);
             User.loggedUser.setNotification(null);
             User.saveUsers();
@@ -1476,7 +1476,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         {
             if((accountRequest.getForename().equals(forename)) && (accountRequest.getSurname().equals(surname)))
             {
-                int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO APPROVE?", "CONFIRM", 
+                int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
                 if(confirm == 0)
@@ -1536,7 +1536,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         String patientID = this.txtAppointmentPatientID.getText();
         String date = this.txtAppointmentDate.getText();
         
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO APPROVE?", "CONFIRM", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
         if(confirm == 0)
@@ -1583,7 +1583,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
     private void btnDeclineAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeclineAppointmentActionPerformed
         
         
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO DECLINE?", "CONFIRM", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
         if(confirm == 0)
@@ -1638,7 +1638,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_tblPrescriptionsMouseClicked
 
     private void btnApprovePrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApprovePrescriptionActionPerformed
-       int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO APPROVE THIS PRESCRIPTION?", "CONFIRM", 
+       int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
         if(confirm == 0)
@@ -1665,8 +1665,8 @@ public class SecretaryFunctions extends javax.swing.JFrame {
                             
                             if((newStock) < 0)
                             {
-                                int orderMore = JOptionPane.showConfirmDialog(this, "THERE IS NOT ENOUGH MEDICINE IN STOCK TO FULFILL THIS PRESCRIPTION"
-                                    + "\nWOULD YOU LIKE TO ORDER MORE?", "CONFIRM", JOptionPane.YES_NO_OPTION);
+                                int orderMore = JOptionPane.showConfirmDialog(this, "Not enough medicine"
+                                    + "\nWould you like to order more stock?", "CONFIRM", JOptionPane.YES_NO_OPTION);
                                 if(orderMore == 0)
                                 {
                                     //OPEN ORDER STOCK TAB
@@ -1718,22 +1718,18 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         String name = this.txtMedicineName.getText();
         int quantity = 0;
         boolean error = false;
-        try
-        {
+        try{
             quantity = Integer.parseInt(this.txtOrderItems.getText());
         }
-        catch(NumberFormatException err)
-        {
-            JOptionPane.showMessageDialog(this, "ENTER ONLY INTEGERS!", "ERROR", JOptionPane.ERROR_MESSAGE);
+        catch(NumberFormatException err){
+            JOptionPane.showMessageDialog(this, "only enter integers!", "ERROR", JOptionPane.ERROR_MESSAGE);
             error = true;
         }
-        if(error != true)
-        {
-            int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO ORDER " + quantity + " ITEMS OF " + name, "CONFIRM", 
+        if(error != true){
+            int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
             JOptionPane.YES_NO_OPTION);
             
-            if(confirm == 0)
-            {
+            if(confirm == 0){
                 orderStock(name, quantity);
             }
         }  
@@ -1757,7 +1753,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_tblStockMouseClicked
 
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO REMOVE THIS PATIENT ACCOUNT?", "CONFIRM", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
         if(confirm == 0)
@@ -1796,7 +1792,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_tblPatientsMouseClicked
 
     private void btnTerminateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminateActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WANT TO REMOVE THIS PATIENT ACCOUNT?", "CONFIRM", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "CONFIRM", 
                 JOptionPane.YES_NO_OPTION);
         
         if(confirm == 0)

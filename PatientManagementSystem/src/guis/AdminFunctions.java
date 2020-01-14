@@ -31,7 +31,7 @@ public class AdminFunctions extends javax.swing.JFrame {
         
         if(notification != null)
         {
-            JOptionPane.showMessageDialog(this, notification.getMessage(), "WELCOME", 
+            JOptionPane.showMessageDialog(this, notification.getMessage(), "Welcome", 
                     JOptionPane.INFORMATION_MESSAGE);
             User.loggedUser.setNotification(null);
             User.saveUsers();
@@ -812,7 +812,7 @@ public class AdminFunctions extends javax.swing.JFrame {
         
         if((forename.equals("")) || (surname.equals("")) || (address.equals("")))
         {
-            JOptionPane.showMessageDialog(this, "FILL IN ALL FIELDS", "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Fill in all fields", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         else
         {
@@ -831,7 +831,7 @@ public class AdminFunctions extends javax.swing.JFrame {
                 newSecretary.addSecretary(newSecretary);
             }
             
-            JOptionPane.showMessageDialog(this, "USER ADDED", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "User added", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
             
             this.txtNewUserForename.setText("");
             this.txtNewUserSurname.setText("");
@@ -871,7 +871,7 @@ public class AdminFunctions extends javax.swing.JFrame {
         double rating = Double.parseDouble(this.txtRating.getText());
         String note = this.txtFeedbackNote.getText();
         
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO CONFIRM?", "WARNING",
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING",
                 JOptionPane.INFORMATION_MESSAGE);
         
         if(confirm == 0)
@@ -997,23 +997,19 @@ public class AdminFunctions extends javax.swing.JFrame {
         String address = this.txtNewAddress.getText();
         String userID = String.format("A%03d", Admin.admins.length + 1);
 
-        if((forename.equals("")) || (surname.equals("")) || (address.equals("")))
-        {
-            JOptionPane.showMessageDialog(this, "FILL IN ALL FIELDS", "ERROR", JOptionPane.ERROR_MESSAGE);
-        }
-        else
-        {
-            int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO CONFIRM?", "WARNING",
+        if((forename.equals("")) || (surname.equals("")) || (address.equals(""))){
+            JOptionPane.showMessageDialog(this, "Please enter all information", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING",
                 JOptionPane.INFORMATION_MESSAGE);
 
-            if(confirm == 0)
-            {
+            if(confirm == 0) {
                 Admin newAdmin = new Admin(userID, "5f4dcc3b5aa765d61d8327deb882cf99", forename, surname, address,
                     new Notification("Welcome to your new Admin Account"));
                 System.out.println(userID);
                 newAdmin.addAdmin(newAdmin);
  
-                JOptionPane.showMessageDialog(this, "ADMIN ADDED", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Admin added", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
 
                 this.txtNewForename.setText("");
                 this.txtNewSurname.setText("");

@@ -38,7 +38,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         
         if(notification != null)
         {
-            JOptionPane.showMessageDialog(this, notification.getMessage(), "WELCOME", 
+            JOptionPane.showMessageDialog(this, notification.getMessage(), "Welcome", 
                     JOptionPane.INFORMATION_MESSAGE);
             patient.setNotification(null);
             Patient.saveUsers();
@@ -1212,8 +1212,7 @@ public class PatientFunctions extends javax.swing.JFrame {
 
     private void cmbDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorActionPerformed
         String doctor = (String) this.cmbDoctor.getSelectedItem();
-        if(doctor != "Select Doctor")
-        {
+        if(doctor != "Select Doctor") {
             this.txtDoctor.setText(doctor);
         }
     }//GEN-LAST:event_cmbDoctorActionPerformed
@@ -1235,34 +1234,29 @@ public class PatientFunctions extends javax.swing.JFrame {
         String enteredDate = this.txtDate.getText();
         String enteredTime = this.txtTime.getText();
         
-        if(!(enteredDate.equals("") || enteredTime.equals("")))
-        {
+        if(!(enteredDate.equals("") || enteredTime.equals(""))){
             String date = this.txtDate.getText() + " " + this.txtTime.getText();
         
-            try
-            {
+            try{
                 Date date1 = new SimpleDateFormat("dd/MM/yyyy HH:MM").parse(date);
 
-                for(Doctor doctor : Doctor.doctors)
-                {
+                for(Doctor doctor : Doctor.doctors){
                     String doctorForename = doctor.getForename();
                     String doctorSurname = doctor.getSurname();
                     String name = doctorForename + " " + doctorSurname;
 
-                    if(doctorName.equals(name))
-                    {
+                    if(doctorName.equals(name)){
                         AppointmentRequest newRequest = new AppointmentRequest(doctor, (Patient) User.loggedUser, date);
                         
                         newRequest.addAppointmentRequest(newRequest);
                         
-                        for(Secretary secretary : Secretary.secretarys)
-                        {
+                        for(Secretary secretary : Secretary.secretarys){
                             secretary.setNotification(new Notification("You have new Requests:"
                                 + "\nAccount Reqeusts \nAppointment Reqeusts \nMedicine Requests \nTermination Requests"));
                         }
                         User.saveUsers();
                         
-                        JOptionPane.showMessageDialog(this, "APPOINTMENT REQUEST SUBMITTED", "SUCCESS", 
+                        JOptionPane.showMessageDialog(this, "Submitted", "SUCCESS", 
                                 JOptionPane.INFORMATION_MESSAGE);
                         
                         this.cmbDoctor.setSelectedIndex(0);
@@ -1274,15 +1268,12 @@ public class PatientFunctions extends javax.swing.JFrame {
                     }
                 }
             }
-            catch(Exception ex)
-            {
-                JOptionPane.showMessageDialog(this, "ENTER A CORRECT DATE AND TIME FORMAT (DD/MM/YYYY HH:MM)", "ERROR",
+            catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "Please enter the right format", "ERROR",
                         JOptionPane.ERROR_MESSAGE);
             }
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this, "ENTER A CORRECT DATE AND TIME FORMAT (DD/MM/YYYY HH:MM)", "ERROR",
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter the right format", "ERROR",
                         JOptionPane.ERROR_MESSAGE);
         }   
     }//GEN-LAST:event_btnConfirmActionPerformed
@@ -1310,7 +1301,7 @@ public class PatientFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_tblPastAppointmentsMouseClicked
 
     private void btnTerminateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminateActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO DELETE YOUR ACCOUNT?", "WARNING", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING", 
                 JOptionPane.WARNING_MESSAGE, JOptionPane.YES_NO_OPTION);
         if(confirm == 0)
         {
@@ -1329,14 +1320,14 @@ public class PatientFunctions extends javax.swing.JFrame {
                 }
                 User.saveUsers();
                 
-                JOptionPane.showMessageDialog(this, "REQUEST COMPLETE", "SUCCESS", 
+                JOptionPane.showMessageDialog(this, "Complete", "SUCCESS", 
                         JOptionPane.INFORMATION_MESSAGE);
                 this.txtTerminationID.setText("");
                 this.txtTerminationPassword.setText("");
             }
             else
             {
-                JOptionPane.showMessageDialog(this, "INCORRECT USERNAME OR PASSWORD", "ERROR",
+                JOptionPane.showMessageDialog(this, "Incorrect username/password", "ERROR",
                         JOptionPane.ERROR_MESSAGE);
             }
         }
@@ -1414,7 +1405,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         if(!((rate.equals("Select Rating")) && (doctorName.equals("Select Doctor"))))
         {
             //Add to doctor's record
-            int confirm = JOptionPane.showConfirmDialog(this, "CONFIRM FEEDBACK?", "WARNING",
+            int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING",
                 JOptionPane.YES_NO_CANCEL_OPTION);
 
             if(confirm == 0)

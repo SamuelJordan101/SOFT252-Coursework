@@ -28,13 +28,11 @@ public class DoctorFunctions extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Syringe.png")));
     }
     
-    private void getUserInfo()
-    {
+    private void getUserInfo(){
         Notification notification = User.loggedUser.getNotification();
         
-        if(notification != null)
-        {
-            JOptionPane.showMessageDialog(this, notification.getMessage(), "WELCOME", 
+        if(notification != null){
+            JOptionPane.showMessageDialog(this, notification.getMessage(), "Welcome", 
                     JOptionPane.INFORMATION_MESSAGE);
             User.loggedUser.setNotification(null);
             User.saveUsers();
@@ -50,23 +48,16 @@ public class DoctorFunctions extends javax.swing.JFrame {
     {
         DefaultTableModel model = (DefaultTableModel) this.tblAppointments.getModel();
         int rows = model.getRowCount();
-        if(rows > 0)
-        {
+        if(rows > 0){
             for (int i = rows - 1; i >= 0; i--)
-            {
                 model.removeRow(i);
-            }
         }
-        for(Appointment appointment : Appointment.appointments)
-        {
-            if(appointment.getDoctor().getID().equals(User.loggedUser.getID()))
-            {
+        for(Appointment appointment : Appointment.appointments) {
+            if(appointment.getDoctor().getID().equals(User.loggedUser.getID())) {
                 String patientName = "";
                 
-                for(Patient patient : Patient.patients)
-                {
-                    if(patient.getID().equals(appointment.getPatient().getID()))
-                    {
+                for(Patient patient : Patient.patients) {
+                    if(patient.getID().equals(appointment.getPatient().getID())) {
                         patientName = patient.getForename() + " " + patient.getSurname();
                     }
                 }          
@@ -1704,7 +1695,7 @@ public class DoctorFunctions extends javax.swing.JFrame {
         String name = this.txtAddMedicineName.getText();
         int quantity = Integer.parseInt(this.txtAddMedicineQauntity.getText());
         
-        int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO REQUEST NEW MEDICINE?", "WARNING", 
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING", 
                 JOptionPane.INFORMATION_MESSAGE);
         
         if(confirm == 0)

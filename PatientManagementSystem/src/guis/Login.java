@@ -474,24 +474,24 @@ public class Login extends javax.swing.JFrame {
         
         if((forename.equals("")) || (surname.equals("")) || (address.equals("")) || (gender.equals("")) || (dob.equals(""))) {
             error = true;
-            JOptionPane.showMessageDialog(this, "FILL ALL FIELDS", "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Please fill in all information", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         else{
             if(!((gender.equals("M")) || (gender.equals("F")))){
                 error = true;
-                JOptionPane.showMessageDialog(this, "USE 'M' OR 'F' FOR GENDER", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Enter correct format", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 try {
                     new SimpleDateFormat("dd/MM/yyyy").parse(dob);
                 } catch(Exception ex) {
                     error = true;
-                    JOptionPane.showMessageDialog(this, "ENTER CORRECT DATE FORMAT", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Enter correct format", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
             }
         }
         
         if(error != true) {
-            int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO SUBMIT?", "WARNING", 
+            int confirm = JOptionPane.showConfirmDialog(this, "Are you sure?", "WARNING", 
                 JOptionPane.INFORMATION_MESSAGE);
         
             if(confirm == 0) {
@@ -499,7 +499,7 @@ public class Login extends javax.swing.JFrame {
                 newAccountRequest.addAccountRequest(newAccountRequest);
                 
                 Notification notification = new Notification("You have new Requests:"
-                        + "\nAccount Reqeusts \nAppointment Reqeusts \nMedicine Requests \nTermination Requests");
+                        + "\nAccount Requests \nAppointment Reqeusts \nMedicine Requests \nTermination Requests");
                 
                 for(User user : User.users) {
                     if(user instanceof Secretary) {
@@ -508,7 +508,7 @@ public class Login extends javax.swing.JFrame {
                 }
                 User.saveUsers();
 
-                JOptionPane.showMessageDialog(this, "ACCOUNT REQUEST SUBMITTED\nYOUR ACCOUNT SHOULD BE AVAILABLE  WITHIN AN HOUR", 
+                JOptionPane.showMessageDialog(this, "Account request submitted\nYour account should be activated soon", 
                         "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
 
                 this.txtForename.setText("");
