@@ -99,23 +99,14 @@ public class Feedback implements Serializable {
     public static void setFeedback() {
         Feedback[] store = {
             new Feedback(
-                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
-                7, "Very kind and gentle person."),
+                new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),
+                10, "Very nice, very helpful"),
             new Feedback(
-                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
-                5, "Nice person but hard to understand."),
+                new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null),
+                5, "Was alright, did their job"),
             new Feedback(
-                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-                3, "Seems very rough and confused half the time"),
-            new Feedback(
-                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-                7, "Very nice doctor."),
-            new Feedback(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
-                9, "Very kind and friendly doctor."),
-            new Feedback(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
-                7, "Always a pleasure to have Dr. Brooks!")
+                new Doctor("D003","5f4dcc3b5aa765d61d8327deb882cf99","Fraser","Mcdodal","94 Dalphos,\nBristol,\nBR73RD",null),
+                0, "Was very late and then didn't even help me")
         };
         feedback = store;
     }

@@ -7,7 +7,7 @@ package guis;
 import javax.swing.table.DefaultTableModel;
 import system.*;
 import users.*;
-import java.awt.Dialog;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,6 +29,12 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         setMedicineRequests();
         setPatients();
         setTerminations();
+        
+        SetIcon();
+    }
+    
+    private void SetIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Syringe.png")));
     }
     
     private void getUserInfo()
@@ -433,6 +439,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Secretary");
 
         lblMain.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMain.setName(""); // NOI18N
@@ -610,37 +617,33 @@ public class SecretaryFunctions extends javax.swing.JFrame {
             .addGroup(tabApprovePatientLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(tabApprovePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
                     .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                        .addGroup(tabApprovePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
-                            .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                                .addComponent(lblForename)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtPatientForename))
-                            .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                                .addComponent(lblSurname)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtPatientSurname, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE))
-                            .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                                .addComponent(lblGender)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtPatientGender))
-                            .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                                .addComponent(lblDOB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtPatientDOB))
-                            .addGroup(tabApprovePatientLayout.createSequentialGroup()
-                                .addComponent(lblApproveAccounts)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
+                        .addComponent(lblForename)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPatientForename))
+                    .addGroup(tabApprovePatientLayout.createSequentialGroup()
+                        .addComponent(lblSurname)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPatientSurname, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE))
+                    .addGroup(tabApprovePatientLayout.createSequentialGroup()
+                        .addComponent(lblGender)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPatientGender))
+                    .addGroup(tabApprovePatientLayout.createSequentialGroup()
+                        .addComponent(lblDOB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPatientDOB))
+                    .addGroup(tabApprovePatientLayout.createSequentialGroup()
+                        .addComponent(lblApproveAccounts)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(tabApprovePatientLayout.createSequentialGroup()
                         .addComponent(lblAddress)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabApprovePatientLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnApprovePatient)
+                        .addComponent(jScrollPane2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabApprovePatientLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnApprovePatient)))
                 .addContainerGap())
         );
         tabApprovePatientLayout.setVerticalGroup(
@@ -1433,7 +1436,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addComponent(menuSecretary, javax.swing.GroupLayout.PREFERRED_SIZE, 1087, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1443,9 +1446,9 @@ public class SecretaryFunctions extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLogout))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(24, 24, 24)
                 .addComponent(menuSecretary)
                 .addContainerGap())
@@ -1853,7 +1856,7 @@ public class SecretaryFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_tblTerminationMouseClicked
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you wish to logout?", "WARNING", JOptionPane.WARNING_MESSAGE);
+        int confirm = JOptionPane.showConfirmDialog(this, "Are You Sure", "Confirmation", JOptionPane.WARNING_MESSAGE);
 
         if(confirm == 0)
         {

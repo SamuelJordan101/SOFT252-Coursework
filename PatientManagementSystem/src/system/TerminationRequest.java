@@ -78,7 +78,7 @@ public class TerminationRequest implements Serializable{
     
     public static void saveTerminationRequests()
     {
-        String filename = "store/terminationRequests.ser"; 
+        String filename = "info/terminationRequests.ser"; 
           
         try {    
             FileOutputStream file = new FileOutputStream(filename); 
@@ -96,10 +96,8 @@ public class TerminationRequest implements Serializable{
     
     public static void setTerminationRequests() {
         TerminationRequest[] store = {
-            new TerminationRequest(new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992")),
-            new TerminationRequest(new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99",
-                "Evan", "Ward", "81 Greenwood Avenue,\nPontnewydd,\nCwmbran,\nNP44 5LH", null, "M", "29/02/2000"))
+            new TerminationRequest(new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99","Sam", "Jordan", "66 Merrifields,\nPlymouth,\nPL36JN", null, "F", "10/08/1992")),
+            new TerminationRequest(new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99","Katie", "Evans", "574 Mutley Plain,\nPlymouth,\nPL93GH", null, "M", "29/02/2000"))
         };
         terminationRequests = store;
     }

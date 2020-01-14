@@ -76,14 +76,14 @@ public class FeedbackRequest extends Feedback{
     {
         FeedbackRequest[] store ={
             new FeedbackRequest(
-                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-                7, "Very nice doctor."),
+                new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),
+                10, "very helpful."),
             new FeedbackRequest(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
-                9, "Very kind and friendly doctor."),
+                new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null),
+                9, "Very nice."),
             new FeedbackRequest(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null),
-                7, "Always a pleasure to have Dr. Brooks!")
+                new Doctor("D003","5f4dcc3b5aa765d61d8327deb882cf99","Fraser","Mcdodal","94 Dalphos,\nBristol,\nBR73RD",null),
+                5, "Didnt even help!")
         };
         feedbackRequests = store;
     }

@@ -88,16 +88,14 @@ public class Medicine implements Serializable{
     public static void setMedicine()
     {   
         Medicine[] store = {
-            new Medicine("Chlorpromazine", 5),
-            new Medicine("Polio Vaccine", 7),
-            new Medicine("Oral Contraceptives", 3),
-            new Medicine("Penicillin", 3),
-            new Medicine("Beta Blocker", 15),
-            new Medicine("Beta2 Agonists", 25),
-            new Medicine("Tamoxifen", 3),
-            new Medicine("Immunosuppressants", 27),
-            new Medicine("HIV/AIDS Antiretrovirals", 18),
-            new Medicine("MMR Vaccine", 11)
+            new Medicine("Propranalol", 4),
+            new Medicine("Paracetamol", 15),
+            new Medicine("Amoxicillin", 50),
+            new Medicine("Omeprazole", 70),
+            new Medicine("Cetirizine Hydrochloride", 30),
+            new Medicine("Propranalol", 30),
+            new Medicine("Citalopram", 15),
+            new Medicine("Nifedipine", 25),
         };
         
         medicines = store;

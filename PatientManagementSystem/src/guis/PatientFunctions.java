@@ -4,17 +4,14 @@
  * and open the template in the editor.
  */
 package guis;
-import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
-import java.awt.Dialog;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
 import java.text.SimpleDateFormat;  
 import java.util.Date;
 import users.*;
 import system.*;
-import javax.swing.*;
 
 /**
  *
@@ -33,6 +30,12 @@ public class PatientFunctions extends javax.swing.JFrame {
         getPrescription();
         getPastAppointments();
         setRatings();
+        
+        SetIcon();
+    }
+    
+    private void SetIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Syringe.png")));
     }
     
     private void getUserInfo()
@@ -306,7 +309,7 @@ public class PatientFunctions extends javax.swing.JFrame {
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Patient Management System");
+        setTitle("Patient");
         setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         setName("MainMenu"); // NOI18N
 
@@ -1198,16 +1201,16 @@ public class PatientFunctions extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLogout)))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLogout))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(menuPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1351,7 +1354,7 @@ public class PatientFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTerminateActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you wish to logout?", "WARNING", JOptionPane.WARNING_MESSAGE);
+        int confirm = JOptionPane.showConfirmDialog(this, "Are You Sure", "Confirmation", JOptionPane.WARNING_MESSAGE);
 
         if(confirm == 0)
         {

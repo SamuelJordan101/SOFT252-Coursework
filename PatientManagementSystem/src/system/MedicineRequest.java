@@ -86,8 +86,8 @@ public class MedicineRequest extends Medicine{
     public static void setMedicineRequests()
     {
         MedicineRequest[] store = {
-            new MedicineRequest("Paracetamol", 45),
-            new MedicineRequest("Iburprofen", 33)
+            new MedicineRequest("Propranalol", 45),
+            new MedicineRequest("Paracetamol", 33)
         };
         
         medicineRequests = store;

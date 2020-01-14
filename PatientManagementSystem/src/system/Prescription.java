@@ -146,21 +146,17 @@ public class Prescription implements Serializable{
     public static void setPrescriptions() {
         Prescription[] store = {
             new Prescription(
-                new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null),
-                new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000"),
-                "Showing signs of health improving.\nOn course for a full recovery.", new Medicine("Chlorpromazine", 5), 4, "1 EVERY 24 HOURS"),
+                new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null),
+                new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
+                "Better, Less Needed", new Medicine("Amoxicillin", 5), 2, "1 EVERY 24 HOURS"),
             new Prescription(
-                new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-                new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", "Chloe", "Jones", "31 Clarence Place,\nPlymouth,\nPL2 3JP", null, "F", "13/06/1998"),
-                "Signs of decreasing health.\nRecommend dosage increase.", new Medicine("Tamoxifen", 3), 9, "1 A DAY"),
+                new Doctor("D003","5f4dcc3b5aa765d61d8327deb882cf99","Fraser","Mcdodal","94 Dalphos,\nBristol,\nBR73RD",null),
+                new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
+                "Worse, More Needed", new Medicine("Propranalol", 30), 5, "1 EVERY 48 HOURS"),
             new Prescription(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null), 
-                new Patient("P002", "5f4dcc3b5aa765d61d8327deb882cf99", "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992"),
-                "Needs more Medicine.", new Medicine("Beta Blocker", 15), 19, "4 EVERY 12 HOURS"),
-            new Prescription(
-                new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null), 
-                new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000"),
-                "Health is looking good.\nRecommend dosage decrease", new Medicine("Immunosuppressants", 15), 19, "1 EVERY 24 HOURS")
+                new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null),
+                new Patient("P003","5f4dcc3b5aa765d61d8327deb882cf99","Imogen","Jones","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999"),
+                "Worse, More Needed", new Medicine("Nifedipine", 25), 1, "4 EVERY 12 HOURS")
         };
         
         prescriptions = store;

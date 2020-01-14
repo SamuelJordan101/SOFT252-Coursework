@@ -4,11 +4,13 @@
  * and open the template in the editor.
  */
 package guis;
+import java.awt.Toolkit;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import users.*;
 import system.*;
+
 
 /**
  *
@@ -24,6 +26,12 @@ public class AdminFunctions extends javax.swing.JFrame {
         getUserInfo();
         getDoctors();
         setFeedbackRequests();
+        
+        SetIcon();
+    }
+    
+    private void SetIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Syringe.png")));
     }
     
     private void getUserInfo()
@@ -165,6 +173,7 @@ public class AdminFunctions extends javax.swing.JFrame {
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Admin");
 
         lblMain.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMain.setName(""); // NOI18N
@@ -908,7 +917,7 @@ public class AdminFunctions extends javax.swing.JFrame {
     }//GEN-LAST:event_btnApproveActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you wish to logout?", "WARNING", JOptionPane.WARNING_MESSAGE);
+        int confirm = JOptionPane.showConfirmDialog(this, "Are You Sure", "Confirmation", JOptionPane.WARNING_MESSAGE);
 
         if(confirm == 0)
         {
@@ -1012,7 +1021,7 @@ public class AdminFunctions extends javax.swing.JFrame {
                     new Notification("Welcome to your new Admin Account"));
                 System.out.println(userID);
                 newAdmin.addAdmin(newAdmin);
-
+ 
                 JOptionPane.showMessageDialog(this, "ADMIN ADDED", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
 
                 this.txtNewForename.setText("");

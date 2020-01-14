@@ -155,7 +155,7 @@ public class Login extends javax.swing.JFrame {
         lblMain.setText("Patient Management System");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Default Data");
+        jButton1.setText("Load Default Data");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -367,14 +367,13 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(227, 227, 227)
-                        .addComponent(btnRequestAccount)
-                        .addGap(0, 17, Short.MAX_VALUE))
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRequestAccount))
                     .addComponent(pnlLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                         .addComponent(btnExit)))
                 .addContainerGap())
         );
@@ -405,39 +404,22 @@ public class Login extends javax.swing.JFrame {
         
         boolean login = false;
         
-        for(User user : User.users)
-        {   
-            if((user.getID().equals(id) && (user.getPassword().equals(password))))
-            {
-                if(user.getID().charAt(0) == 'P')
-                {
-                    //SHOW PATIENT MENU
+        for(User user : User.users) {   
+            if((user.getID().equals(id) && (user.getPassword().equals(password)))) {
+                if(user.getID().charAt(0) == 'P') {
                     User.loggedUser = user;
-                    
                     PatientFunctions patientMenu = new PatientFunctions();
                     patientMenu.setVisible(true);
-                }
-                else if(user.getID().charAt(0) == 'D')
-                {
-                    //SHOW DOCTOR MENU
+                } else if(user.getID().charAt(0) == 'D') {
                     User.loggedUser = user;
-                    
                     DoctorFunctions doctorMenu = new DoctorFunctions();
                     doctorMenu.setVisible(true);
-                }
-                else if(user.getID().charAt(0) == 'A')
-                {
-                    //SHOW ADMIN MENU
+                } else if(user.getID().charAt(0) == 'A') {
                     User.loggedUser = user;
-                    
                     AdminFunctions adminMenu = new AdminFunctions();
                     adminMenu.setVisible(true);
-                }
-                else if(user.getID().charAt(0) == 'S')
-                {
-                    //SHOW SECRETARY MENU
+                } else if(user.getID().charAt(0) == 'S') {
                     User.loggedUser = user;
-                    
                     SecretaryFunctions secretaryMenu = new SecretaryFunctions();
                     secretaryMenu.setVisible(true);    
                 }
@@ -447,8 +429,7 @@ public class Login extends javax.swing.JFrame {
             }
         }
         
-        if(login != true)
-        {
+        if(login != true) {
             JOptionPane.showMessageDialog(null, "Incorrect User ID or Password", "ERROR", JOptionPane.OK_OPTION);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -467,6 +448,8 @@ public class Login extends javax.swing.JFrame {
         Feedback.getFeedback();
         TerminationRequest.getTerminationRequests();
         AccountRequest.getAccountRequests();
+        
+        JOptionPane.showMessageDialog(rootPane, "Default Data Set");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnRequestAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestAccountActionPerformed
@@ -489,49 +472,37 @@ public class Login extends javax.swing.JFrame {
         
         boolean error = false;
         
-        if((forename.equals("")) || (surname.equals("")) || (address.equals("")) || (gender.equals("")) || (dob.equals("")))
-        {
+        if((forename.equals("")) || (surname.equals("")) || (address.equals("")) || (gender.equals("")) || (dob.equals(""))) {
             error = true;
             JOptionPane.showMessageDialog(this, "FILL ALL FIELDS", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
-        else
-        {
-            if(!((gender.equals("M")) || (gender.equals("F"))))
-            {
+        else{
+            if(!((gender.equals("M")) || (gender.equals("F")))){
                 error = true;
                 JOptionPane.showMessageDialog(this, "USE 'M' OR 'F' FOR GENDER", "ERROR", JOptionPane.ERROR_MESSAGE);
-            }
-            else
-            {
-                try
-                {
+            } else {
+                try {
                     new SimpleDateFormat("dd/MM/yyyy").parse(dob);
-                }
-                catch(Exception ex)
-                {
+                } catch(Exception ex) {
                     error = true;
                     JOptionPane.showMessageDialog(this, "ENTER CORRECT DATE FORMAT", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
             }
         }
         
-        if(error != true)
-        {
+        if(error != true) {
             int confirm = JOptionPane.showConfirmDialog(this, "ARE YOU SURE YOU WISH TO SUBMIT?", "WARNING", 
                 JOptionPane.INFORMATION_MESSAGE);
         
-            if(confirm == 0)
-            {
+            if(confirm == 0) {
                 AccountRequest newAccountRequest = new AccountRequest(password, forename, surname, address, gender, dob);
                 newAccountRequest.addAccountRequest(newAccountRequest);
                 
                 Notification notification = new Notification("You have new Requests:"
                         + "\nAccount Reqeusts \nAppointment Reqeusts \nMedicine Requests \nTermination Requests");
                 
-                for(User user : User.users)
-                {
-                    if(user instanceof Secretary)
-                    {
+                for(User user : User.users) {
+                    if(user instanceof Secretary) {
                         user.setNotification(notification);
                     }
                 }
@@ -595,11 +566,9 @@ public class Login extends javax.swing.JFrame {
         Runtime.getRuntime().addShutdownHook(shutDownTask);
     }
     
-    private static class ShutDownTask extends Thread
-    {
+    private static class ShutDownTask extends Thread {
         @Override
-	public void run() 
-        {
+	public void run() {
             User.saveUsers();
             Appointment.saveAppointments();
             Prescription.savePrescriptions();

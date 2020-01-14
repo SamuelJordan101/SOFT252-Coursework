@@ -147,8 +147,8 @@ public class AccountRequest implements Serializable {
     public static void setAccountRequests()
     {
         AccountRequest[] store = {
-            new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99","George", "Humphries", "91 New George St,\nPlymouth,\nPL1 1RQ", "M", "16/05/1994"),
-            new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99", "Emilie", "Huntley", "14-16,\nUnion St,\nPlymouth,\nPL1 2SR", "F", "13/11/1998")
+            new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99","Geoff", "Gibbs", "15 Starter Lane,\nPlymouth,\nPL83YD", "M", "16/05/1975"),
+            new AccountRequest("5f4dcc3b5aa765d61d8327deb882cf99", "Amelia", "Dom", "84 Mouldon,\nPlymouth,\nPL45TF", "F", "13/11/1976")
         };
         
         accountRequests = store;
