@@ -93,7 +93,7 @@ public class PastAppointmentIT {
         PastAppointment.savePastAppointments();
         boolean error;
         
-        String filename = "data/pastAppointments.ser";
+        String filename = "info/pastAppointments.ser";
 
         File file = new File(filename);
         

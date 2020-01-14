@@ -30,8 +30,7 @@ public class PrescriptionIT {
         System.out.println("getDoctor");
         
         Prescription instance = Prescription.prescriptions[0];
-        Doctor expResult = new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null);
+        Doctor expResult = new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null);
         Doctor result = instance.getDoctor();
         
         assertEquals(expResult.getID(), result.getID());
@@ -41,8 +40,7 @@ public class PrescriptionIT {
     public void testSetDoctor() {
         System.out.println("setDoctor");
         
-        Doctor Doctor = new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null);
+        Doctor Doctor = new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null);
         Prescription instance = Prescription.prescriptions[0];
         instance.setDoctor(Doctor);
         
@@ -55,8 +53,7 @@ public class PrescriptionIT {
         System.out.println("getPatient");
         
         Prescription instance = Prescription.prescriptions[0];
-        Patient expResult = new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000");
+        Patient expResult = new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000");
         Patient result = instance.getPatient();
         
         
@@ -67,8 +64,7 @@ public class PrescriptionIT {
     public void testSetPatient() {
         System.out.println("setPatient");
         
-        Patient Patient = new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Chloe", "Jones", "31 Clarence Place,\nPlymouth,\nPL2 3JP", null, "F", "13/06/1998");
+        Patient Patient = new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000");
         Prescription instance = Prescription.prescriptions[0];
         instance.setPatient(Patient);
         
@@ -190,9 +186,9 @@ public class PrescriptionIT {
         Login.defaultData();
         System.out.println("addPrescription");
         Prescription newPrescription = new Prescription(
-                    new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-                    new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992"),
-                    "Health in perfect condition.\nRecommend dosage decrease.", new Medicine("Penicillin", 5), 6, "1 EVERY 48 HOURS");
+                    new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),
+                    new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000"),
+                    "Health in perfect condition.\nRecommend dosage decrease.", new Medicine("Propranalol", 4), 1, "1 EVERY 48 HOURS");
         newPrescription.addPrescription(newPrescription);
         
         Prescription instance = Prescription.prescriptions[Prescription.prescriptions.length - 1];
@@ -214,7 +210,7 @@ public class PrescriptionIT {
         Prescription.savePrescriptions();
         boolean error;
         
-        String filename = "data/prescriptions.ser";
+        String filename = "info/prescriptions.ser";
 
         File file = new File(filename);
         

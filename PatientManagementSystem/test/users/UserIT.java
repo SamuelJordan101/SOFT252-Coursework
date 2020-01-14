@@ -162,7 +162,7 @@ public class UserIT {
     public void testAddUser() {
         Login.defaultData();
         System.out.println("addUser");
-        User newUser = new User("A002", "password", "Evan", "Ward", "81 Greenwood Avenue,\nPontnewydd,\nCwmbran,\nNP44 5LH", null);
+        User newUser = new User("A002", "password", "Sam", "Jordan", "89 Beechwood Avenue,\nPlymouth,\nPL46PW", null);
         
         newUser.addUser(newUser);
         

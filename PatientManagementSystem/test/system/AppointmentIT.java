@@ -30,8 +30,7 @@ public class AppointmentIT {
         System.out.println("getDoctor");
         
         Appointment instance = Appointment.appointments[0];
-        Doctor expResult = new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null);
+        Doctor expResult = new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null);
         Doctor result = instance.getDoctor();
         
         assertEquals(expResult.getID(), result.getID());
@@ -41,8 +40,7 @@ public class AppointmentIT {
     public void testSetDoctor() {
         System.out.println("setDoctor");
         
-        Doctor Doctor = new Doctor("D003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Henry", "Brooks", "66 Neswick Street,\nPlymouth,\nPL2 5JN", null); 
+        Doctor Doctor = new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null); 
         Appointment instance = Appointment.appointments[0];
         instance.setDoctor(Doctor);
         boolean error;
@@ -62,8 +60,7 @@ public class AppointmentIT {
         System.out.println("getPatient");
         
         Appointment instance = Appointment.appointments[0];
-        Patient expResult = new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992");
+        Patient expResult = new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000");
         Patient result = instance.getPatient();
         
         assertEquals(expResult.getID(), result.getID());
@@ -72,8 +69,7 @@ public class AppointmentIT {
     @Test
     public void testSetPatient() {
         System.out.println("setPatient");
-        Patient Patient = new Patient("P004", "password", "Evan", "Ward",
-                                "81 Greenwood Avenue,\nPontnewydd,\nCwmbran,\nNP44 5LH", null, "M", "29/02/2000");
+        Patient Patient = new Patient("P001","5f4dcc3b5aa765d61d8327deb882cf99","Sam","Jordan","42 Beechwood Avenue,\n Plymouth,\nPL46PW",null,"M","30/06/2000");
         Appointment instance = Appointment.appointments[0];
         instance.setPatient(Patient);
         boolean error;
@@ -114,8 +110,8 @@ public class AppointmentIT {
         Login.defaultData();
         System.out.println("addAppointment");
         Appointment newAppointment = new Appointment(
-            new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
-            new Patient("P001", "5f4dcc3b5aa765d61d8327deb882cf99", "Evan", "Ward", "Flat 5,\n58 North Road East,\nPlymouth,\nPL4 6AJ", null, "M", "29/02/2000"),
+            new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),
+            new Patient("P002","5f4dcc3b5aa765d61d8327deb882cf99","Owen","Howarth","56 Clothworth,\n Plymouth,\nPL94RU",null,"M","13/10/2000"),
             "06/01/2020");
         
         newAppointment.addAppointment(newAppointment);
@@ -166,7 +162,7 @@ public class AppointmentIT {
         Appointment.getAppointments();
         boolean error;
         
-        String filename = "data/appointments.ser";
+        String filename = "info/appointments.ser";
 
         File file = new File(filename);
         

@@ -61,7 +61,7 @@ public class AccountRequestIT {
     @Test
     public void testSetForename() {
         System.out.println("setName");
-        String Forename = "Jack";
+        String Forename = "Sam";
         AccountRequest instance = AccountRequest.accountRequests[0];
         instance.setForename(Forename);
 
@@ -73,7 +73,7 @@ public class AccountRequestIT {
         System.out.println("getSurname");
         
         AccountRequest instance = AccountRequest.accountRequests[0];
-        String expResult = "Humphries";
+        String expResult = "Jordan";
         
         String result = instance.getSurname();
         
@@ -167,8 +167,8 @@ public class AccountRequestIT {
     @Test
     public void testAddAccountRequest() {
         System.out.println("addAccountRequest");
-        AccountRequest newAccountRequest = new AccountRequest("password", "Evan", "Ward", 
-            "81 Greenwood Avenue,\n Pontnewydd,\nCwmbran,\nNP44 5LH", "M", "29/02/2000");
+        AccountRequest newAccountRequest = new AccountRequest("password", "Sam", "Jordan", 
+            "84 Beechwood Avenue,\n Plymouth,\nPL75LH", "M", "29/02/2000");
         
         newAccountRequest.addAccountRequest(newAccountRequest);
         
@@ -214,7 +214,7 @@ public class AccountRequestIT {
         System.out.println("saveAccountRequests");
         AccountRequest.saveAccountRequests();
         
-        String filename = "data/accountRequests.ser";
+        String filename = "info/accountRequests.ser";
         boolean error;
 
         File file = new File(filename);

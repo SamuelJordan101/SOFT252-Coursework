@@ -79,7 +79,7 @@ public class MedicineRequestIT {
         MedicineRequest.saveMedicineRequests();
         boolean error;
         
-        String filename = "data/medicineRequests.ser";
+        String filename = "info/medicineRequests.ser";
 
         File file = new File(filename);
         

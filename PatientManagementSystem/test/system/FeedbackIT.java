@@ -29,8 +29,7 @@ public class FeedbackIT {
         System.out.println("getDoctor");
         
         Feedback instance = Feedback.feedback[0];
-        Doctor expResult = new Doctor("D001", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Joe", "Bloggs", "3 Charles Darwin Road,\nPlymouth,\nPL3 4GU", null);
+        Doctor expResult = new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null);
         Doctor result = instance.getDoctor();
         
         assertEquals(expResult.getID(), result.getID());
@@ -39,8 +38,7 @@ public class FeedbackIT {
     @Test
     public void testSetDoctor() {
         System.out.println("setDoctor");
-        Doctor Doctor = new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null);
+        Doctor Doctor = new Doctor("D002","5f4dcc3b5aa765d61d8327deb882cf99","Stanley","Doorsworth","7 Cottages,\n London,\nLN47TS",null);
         Feedback instance = Feedback.feedback[0];
         instance.setDoctor(Doctor);
         
@@ -99,8 +97,7 @@ public class FeedbackIT {
         Login.defaultData();
         System.out.println("addFeedback");
         Feedback newFeedback = new Feedback(
-                                    new Doctor("D002", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                                        "Shirley", "Jones", "5 Admirals Hard,\nPlymouth,\nPL1 3RJ", null),
+                                    new Doctor("D001","5f4dcc3b5aa765d61d8327deb882cf99","Jeffrey","Halbert","8 Hillside,\n Plymouth,\nPL63TQ",null),
                                     0, "Very nice Doctor");
 
         newFeedback.addFeedback(newFeedback);
@@ -134,7 +131,7 @@ public class FeedbackIT {
         Feedback.saveFeedback();
         boolean error;
         
-        String filename = "data/feedback.ser";
+        String filename = "info/feedback.ser";
 
         File file = new File(filename);
         

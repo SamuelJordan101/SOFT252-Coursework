@@ -27,7 +27,7 @@ public class MedicineIT {
         System.out.println("getName");
         
         Medicine instance = Medicine.medicines[0];
-        String expResult = "Chlorpromazine";
+        String expResult = "Propranalol";
         String result = instance.getName();
         
         assertEquals(expResult, result);
@@ -72,7 +72,7 @@ public class MedicineIT {
     {
         System.out.println("addMedicine");
         
-        Medicine newMedicine = new Medicine("DRUGS", 22);
+        Medicine newMedicine = new Medicine("drugs", 22);
         newMedicine.addMedicine(newMedicine);
         
         Medicine instance = Medicine.medicines[Medicine.medicines.length -1];
@@ -103,7 +103,7 @@ public class MedicineIT {
         Medicine.saveMedicine();
         boolean error;
         
-        String filename = "data/medicines.ser";
+        String filename = "info/medicines.ser";
 
         File file = new File(filename);
         

@@ -27,8 +27,7 @@ public class TerminationRequestIT {
     public void testGetPatient() {
         System.out.println("getPatient");
         TerminationRequest instance = TerminationRequest.terminationRequests[0];
-        Patient expResult = new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992");
+        Patient expResult = new Patient("P003","5f4dcc3b5aa765d61d8327deb882cf99","Imogen","Jones","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999");
         Patient result = instance.getPatient();
         
         assertEquals(expResult.getID(), result.getID());
@@ -38,8 +37,7 @@ public class TerminationRequestIT {
     public void testSetPatientID() {
         Login.defaultData();
         System.out.println("setPatientID");
-        Patient Patient = new Patient("P003", "5f4dcc3b5aa765d61d8327deb882cf99", 
-                "Linda", "Bennett", "66 Neswick Street,\nPlymouth,\nPL1 5JN", null, "F", "10/08/1992");
+        Patient Patient = new Patient("P003","5f4dcc3b5aa765d61d8327deb882cf99","Imogen","Jones","3 Macklesworth,\n Totnes,\nTO32BK",null,"M","19/02/1999");
         TerminationRequest instance = TerminationRequest.terminationRequests[0];
         instance.setPatientID(Patient);
         
@@ -70,7 +68,7 @@ public class TerminationRequestIT {
         System.out.println("addTerminationRequest");
         
         TerminationRequest newTerminationRequest = new TerminationRequest(
-            new Patient("P002", "5f4dcc3b5aa765d61d8327deb882cf99", "Chloe", "Jones", "31 Clarence Place,\nPlymouth,\nPL2 3JP", null, "F", "13/06/1998"));
+            new Patient("P002","5f4dcc3b5aa765d61d8327deb882cf99","Owen","Howarth","56 Clothworth,\n Plymouth,\nPL94RU",null,"M","13/10/2000"));
         newTerminationRequest.addTerminationRequest(newTerminationRequest);
        
         int i = TerminationRequest.terminationRequests.length - 1;
@@ -102,7 +100,7 @@ public class TerminationRequestIT {
         TerminationRequest.saveTerminationRequests();
         boolean error;
         
-        String filename = "data/terminationRequests.ser";
+        String filename = "info/terminationRequests.ser";
 
         File file = new File(filename);
         
